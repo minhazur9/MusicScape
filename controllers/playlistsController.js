@@ -5,17 +5,29 @@ const db = require('../models')
 
 
 // New Playlist 
-router.get('/new', (req,res) => {
+router.get('/new', (req, res) => {
     db.User.find({}, (err, allUsers) => {
-        if(err) return console.log(err);
-        const context = {allUsers}
-        res.render('playlists/new',context);
+        if (err) return console.log(err);
+        const context = { allUsers }
+        res.render('playlists/new', context);
     })
 })
 
 // Create Playlist
-router.post('/:userId', (req,res) => {
-    db.Playlist.create(req.body, )
+router.post('/', (req, res) => {
+    db.Playlist.create(req.body, (err, newPlaylist) => {
+        if (err) return console.log(err);
+        db.User.findById(req.body.user, (err, foundUser) => {
+            if (err) return console.log(err);
+            foundUser.playlists.push(newPlaylist._id);
+            foundUser.save((err, savedUser) => {
+                if (err) return console.log(err);
+                res.redirect(`/users/${foundUser._id}`);
+            })
+
+        })
+
+    })
 })
 
 
