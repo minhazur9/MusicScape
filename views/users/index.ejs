@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Index</title>
+</head>
+<body>
+    <h1>All existing users</h1>
+    <ul>
+<% for(let i = 0; i < allUsers.length; i++) { %>
+    <li class = 'userlist'>
+        <a href="/users/<%=allUsers[i]._id %>"><%=allUsers[i].name %></a>
+    </li>
+<% } %>
+    </ul>
+</body>
+</html>
