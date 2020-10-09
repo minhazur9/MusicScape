@@ -25,32 +25,32 @@ From the playlist show page, users will have the option to create, edit or delet
 The "view users" link on the home page will redirect users to a user index page where they can view all existing users. Clicking on the name of a user will redirect you to the users show page where you will be able to view a list of all of the playlists that the user has created. By clicking on the name of a playlist, the user will be redirected to that playlists show page where they can view the songs inside of the playlist.
 
 ## Home Page
-![Home][assets/home_route.PNG]
+![Home](assets/home_route.PNG)
 
 ## ERD
-![ERD][assets/ERD.PNG]
+![ERD](assets/ERD.PNG)
 
 ## Users
 New
-![Add][assets/users/new_route.PNG]
+![Add](assets/users/new_route.PNG)
 
 Show
-![Show][assets/users/show_route.PNG]
+![Show](assets/users/show_route.PNG)
 
 Index
-![Index][assets/users/index_route.PNG]
+![Index](assets/users/index_route.PNG)
 
 Edit
-![Edit][assets/users/edit_route.PNG]
+![Edit](assets/users/edit_route.PNG)
 
 ## Playlists
 New/Edit
-![Add/Edit][assets/playlists/add-edit_route.PNG]
+![Add/Edit](assets/playlists/add-edit_route.PNG)
 
 Show
-![Show][assets/playlists/show_route.PNG]
+![Show](assets/playlists/show_route.PNG)
 
 ## Song
 Add song
-![Add][assets/addSong.PNG]
+![Add](assets/addSong.PNG)
 
