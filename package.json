@@ -17,5 +17,9 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.10.9"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/cirrusm/Project-One.git"
+  }
 }
