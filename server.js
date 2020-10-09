@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', ctrl.users);
-// app.use('/playlists', ctrl.playlists);
+app.use('/playlists', ctrl.playlists);
 
 app.use('*', (req, res) => {
     res.render('404');
