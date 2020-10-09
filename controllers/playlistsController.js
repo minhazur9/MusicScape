@@ -22,23 +22,21 @@ router.post('/', (req, res) => {
             foundUser.playlists.push(newPlaylist._id);
             foundUser.save((err, savedUser) => {
                 if (err) return console.log(err);
-                res.redirect(`/users/${foundUser._id}`);
+                res.redirect(`../users/${foundUser._id}`);
             })
-
         })
-
     })
 })
 
-
 // Show Playlist
-// router.get('/:playlistId', (req, res) => {
-//     const playlistId = req.body.params.playlistId;
-//     db.Playlist.find(playlistId)
-//         .populate('users')
-//         .exec((err, foundPlaylist) => {
-//         if(err) return console.log(err);
-//         res.render(`playlists/${playlistId}`);
-//     });
-// });
+router.get('/:playlistId', (req, res) => {
+    const playlistId = req.body.params.playlistId;
+    db.Playlist.find(playlistId)
+        .populate('users')
+        .exec((err, foundPlaylist) => {
+            if (err) return console.log(err);
+            const context = {foundPlaylist};
+            res.render('playlists/show',context);
+        });
+});
 module.exports = router
