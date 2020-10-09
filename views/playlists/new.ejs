@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Playlist</title>
+</head>
+<body>
+    <h1>Add Playlist</h1>
+    <form action="/" method="POST">
+        <div>
+            <select name="user">
+                <% for( let i = 0; i < allUsers.length; i++ ) { %>
+                    <option value=<%= allUsers[i]._id %>><%= allUsers[i].name %></option>
+                <% } %>
+                
+            </select>
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="genre">Central Genre</label>
+            <input type="text" name="genre" id="genre">
+        </div>
+
+        <div>
+            <input type="submit" value="Add Playlist">
+        </div>
+    </form>
+</body>
+</html>
