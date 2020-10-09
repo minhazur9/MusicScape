@@ -6,7 +6,16 @@ const db = require('../models')
 
 // New Playlist 
 router.get('/new', (req,res) => {
-    res.render('playlists/new');
+    db.User.find({}, (err, allUsers) => {
+        if(err) return console.log(err);
+        const context = {allUsers}
+        res.render('playlists/new',context);
+    })
+})
+
+// Create Playlist
+router.post('/:userId', (req,res) => {
+    db.Playlist.create(req.body, )
 })
 
 

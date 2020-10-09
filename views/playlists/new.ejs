@@ -7,7 +7,15 @@
 </head>
 <body>
     <h1>Add Playlist</h1>
-    <form action="/" method="POST">
+    <form action="" method="POST">
+        <div>
+            <select name="user">
+                <% for( let i = 0; i < allUsers.length; i++ ) { %>
+                    <option value="<%= allUsers[i].name %> "></option>
+                <% } %>
+                
+            </select>
+        </div>
         <div>
             <label for="name">Name</label>
             <input type="text" name="name" id="name">
