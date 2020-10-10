@@ -5,8 +5,12 @@ const db = require('../models')
 
 
 // Redirect to New Playlist
-router.get('/', (req,res) => {
-    res.redirect('playlists/new');
+router.get('/', (req, res) => {
+    db.Playlist.find({}, (err, allPlaylists) => {
+        if (err) return console.log(err);
+        const context = { allPlaylists }
+        res.render('playlists',context)
+    })
 })
 
 // New Playlist 
@@ -40,8 +44,8 @@ router.get('/:playlistId', (req, res) => {
         .populate('user')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
-            const context = {foundPlaylist};
-            res.render('playlists/show',context);
+            const context = { foundPlaylist };
+            res.render('playlists/show', context);
         });
 });
 module.exports = router

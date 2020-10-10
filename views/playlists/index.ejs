@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/nav') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>All Playlists</title>
 </head>
+
 <body>
-    
+    <h1>List of All Playlists</h1>
+    <ul>
+        <% for( let i = 0; i < allPlaylists.length; i++ ) { %>
+                <li><a href="playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %></a></li>
+        <% } %>
+    </ul>
 </body>
+
 </html>

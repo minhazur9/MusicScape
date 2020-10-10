@@ -8,10 +8,8 @@
 <body>
     <%- include('../partials/nav') %>
     <h3>Name: <%= foundPlaylist.name %> </h3>
-    <h3>Created by: <%= foundPlaylist.user.name %> </h3>
+    <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
     <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
     <h3>Songs: <%= foundPlaylist.songs %> </h3>
-
-    
 </body>
 </html>
