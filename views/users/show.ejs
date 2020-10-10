@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Show page</title>
+    <%- include('../partials/nav') %>
 </head>
 <body>
-    <nav> <a href="/users"> All Users</a></nav>
+    
     <h1><%= user.name %> </h1>
     <h2> Favorite Artist: <%= user.artist %></h2>
     <h3>Playlists</h3>
