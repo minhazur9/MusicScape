@@ -4,6 +4,15 @@ const router = express.Router()
 const db = require('../models')
 
 
+// Redirect to New Playlist
+router.get('/', (req, res) => {
+    db.Playlist.find({}, (err, allPlaylists) => {
+        if (err) return console.log(err);
+        const context = { allPlaylists }
+        res.render('playlists', context)
+    })
+})
+
 // New Playlist 
 router.get('/new', (req, res) => {
     db.User.find({}, (err, allUsers) => {
@@ -30,13 +39,52 @@ router.post('/', (req, res) => {
 
 // Show Playlist
 router.get('/:playlistId', (req, res) => {
-    const playlistId = req.body.params.playlistId;
-    db.Playlist.find(playlistId)
-        .populate('users')
+    const playlistId = req.params.playlistId;
+    db.Playlist.findById(playlistId)
+        .populate('user')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
-            const context = {foundPlaylist};
-            res.render('playlists/show',context);
+            const context = { foundPlaylist };
+            res.render('playlists/show', context);
         });
 });
+
+// Edit Playlist
+router.get('/:playlistId/edit', (req, res) => {
+    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+        if (err) return console.log(err);
+        const context = { foundPlaylist };
+        res.render('playlists/edit', context);
+    })
+
+})
+
+// Update Playlist
+router.put('/:playlistId', (req, res) => {
+    db.Playlist.findByIdAndUpdate(
+        req.params.playlistId,
+        req.body,
+        (err, updatedPlaylist) => {
+            if (err) return console.log(err);
+            res.redirect(`/playlists/${updatedPlaylist._id}`)
+        })
+})
+
+// Delete Playlist
+router.delete('/:playlistId', (req, res) => {
+    const playlistId = req.params.playlistId;
+    db.Playlist.findByIdAndDelete(playlistId, (err) => {
+        if (err) return console.log(err);
+        db.User.findOne({ playlists: playlistId }, (err, foundUser) => {
+            if (err) return console.log(err);
+            foundUser.playlists.remove(playlistId);
+            foundUser.save((err, updatedUser) => {
+                if (err) return console.log(err);
+                res.redirect('/playlists')
+            })
+        })
+    })
+})
+
+
 module.exports = router
