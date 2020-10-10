@@ -12,8 +12,17 @@
     <h3>Name: <%= foundPlaylist.name %> </h3>
     <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
     <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
-    <h3>Songs: <%= foundPlaylist.songs %> </h3>
+    <h3>Songs: </h3>
+    <ul>
+        <% for( let i = 0; i < foundPlaylist.songs.length; i++ ) { %>
+                <li><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
+        <% } %>
+    </ul>
     <div>
+        <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
+            <input type="submit" value="New Song">
+        </form>
+
         <form action="/playlists/<%= foundPlaylist.id %>/edit" method="GET">
             <input type="submit" value="Edit Playlist">
         </form>

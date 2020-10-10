@@ -37,6 +37,19 @@ router.post('/', (req, res) => {
     })
 })
 
+// Create Song
+router.post('/:playlistId', (req,res) => {
+    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+        if (err) return console.log(err);
+        console.log(req.body);
+        foundPlaylist.songs.push(req.body);
+        foundPlaylist.save((err, savedSong) => {
+            if (err) return console.log(err);
+            res.redirect(`../playlists/${foundPlaylist._id}`);
+        })
+    })
+})
+
 // Show Playlist
 router.get('/:playlistId', (req, res) => {
     const playlistId = req.params.playlistId;
@@ -57,6 +70,15 @@ router.get('/:playlistId/edit', (req, res) => {
         res.render('playlists/edit', context);
     })
 
+})
+
+// New Song
+router.get('/:playlistId/newSong', (req, res) => {
+    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+        if (err) return console.log(err);
+        const context = { foundPlaylist };
+        res.render('playlists/newSong',context);
+    })
 })
 
 // Update Playlist

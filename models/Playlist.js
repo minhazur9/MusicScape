@@ -6,7 +6,8 @@ const playlistSchema = new mongoose.Schema({
         required: true,
     },
     songs : [{
-        type: String
+        name: String,
+        artist: String
     }],
     genre: {
         type: String
