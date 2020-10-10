@@ -4,6 +4,11 @@ const router = express.Router()
 const db = require('../models')
 
 
+// Redirect to New Playlist
+router.get('/', (req,res) => {
+    res.redirect('playlists/new');
+})
+
 // New Playlist 
 router.get('/new', (req, res) => {
     db.User.find({}, (err, allUsers) => {
@@ -30,9 +35,9 @@ router.post('/', (req, res) => {
 
 // Show Playlist
 router.get('/:playlistId', (req, res) => {
-    const playlistId = req.body.params.playlistId;
-    db.Playlist.find(playlistId)
-        .populate('users')
+    const playlistId = req.params.playlistId;
+    db.Playlist.findById(playlistId)
+        .populate('user')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
             const context = {foundPlaylist};
