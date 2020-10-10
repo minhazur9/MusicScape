@@ -19,6 +19,10 @@
         <% } %>
     </ul>
     <div>
+        <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
+            <input type="submit" value="New Song">
+        </form>
+
         <form action="/playlists/<%= foundPlaylist.id %>/edit" method="GET">
             <input type="submit" value="Edit Playlist">
         </form>
