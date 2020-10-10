@@ -6,15 +6,28 @@
     <title>New User</title>
 </head>
 <body>
+    <a href="/users">All Users</a>
     <h1>New User</h1>
 
     <form action = '/users' method ="POST">
-    <label for="name">Name</label>
+    <div>
+        <label for="name">Name</label>
+    
+
     <input type = "text" id="name" name = "name">
+    </div>
+    <div>
     <label for="password">Password</label>
     <input type = "text" id="password" name="password">
-    <button type = "submit"> Add User</button>
+    </div>
+    <div>
+    <label for = "artist">Favorite Artist</label>
     
+    <input type = "text" id="artist" name="artist">
+    </div>
+    <div>
+    <button type = "submit"> Add User</button>
+    </div>
     </form>
 </body>
 </html>

@@ -6,6 +6,22 @@
     <title>Edit user</title>
 </head>
 <body>
-    Edit user
+    <h2> Edit <%= user.name %> </h2>
+
+    <form action = "/users/<%= user._id %>?_method=PUT" method = "POSt">
+        <div>
+        <label for ="name">Name:</label>
+    <input type="text" name="name" value= "<%= user.name %>">
+    </div>
+    <div>
+    <label for ="password"> Password:</label>
+    <input type="text" name="password" value= "<%= user.password %>">
+    </div>
+    <div>
+    <label for = "artist"> Favorite Artist</label>
+    <input type="text" name="artist" value= "<%= user.artist %>">
+        </div>
+    <input type = "submit">
+    </form>
 </body>
 </html>
