@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit</title>
 </head>
 <body>
     <%- include('../partials/nav') %>
-    
+    <h1>Edit Playlist</h1>
+    <form action="/playlists/<%= foundPlaylist._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%= foundPlaylist.name %>">
+        </div>
+
+        <div>
+            <label for="genre">Central Genre</label>
+            <input type="text" name="genre" id="genre" value="<%= foundPlaylist.genre %>">
+        </div>
+
+        <div>
+            <input type="submit" value="Confirm Changes">
+        </div>
+    </form>
 </body>
 </html>
