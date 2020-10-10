@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     db.Playlist.find({}, (err, allPlaylists) => {
         if (err) return console.log(err);
         const context = { allPlaylists }
-        res.render('playlists',context)
+        res.render('playlists', context)
     })
 })
 
@@ -48,4 +48,27 @@ router.get('/:playlistId', (req, res) => {
             res.render('playlists/show', context);
         });
 });
+
+// Edit Playlist
+router.get('/:playlistId/edit', (req, res) => {
+    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+        if (err) return console.log(err);
+        const context = { foundPlaylist };
+        res.render('playlists/edit', context);
+    })
+
+})
+
+// Update Playlist
+router.put('/:playlistId', (req, res) => {
+    db.Playlist.findByIdAndUpdate(
+        req.params.playlistId,
+        req.body,
+        (err, updatedPlaylist) => {
+            if (err) return console.log(err);
+            res.redirect(`/playlists/${updatedPlaylist._id}`)
+        })
+})
+
+
 module.exports = router

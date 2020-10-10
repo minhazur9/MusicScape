@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Playlist</title>
 </head>
+
 <body>
     <%- include('../partials/nav') %>
     <h3>Name: <%= foundPlaylist.name %> </h3>
     <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
     <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
     <h3>Songs: <%= foundPlaylist.songs %> </h3>
+    <div>
+        <form action="/playlists/<%= foundPlaylist.id %>/edit" method="GET">
+            <input type="submit" value="Edit Playlist">
+        </form>
+    </div>
 </body>
+
 </html>
