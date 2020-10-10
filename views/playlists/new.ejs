@@ -6,8 +6,9 @@
     <title>New Playlist</title>
 </head>
 <body>
+    <%- include('../partials/nav') %> 
     <h1>Add Playlist</h1>
-    <form action="/" method="POST">
+    <form action="/playlists" method="POST">
         <div>
             <select name="user">
                 <% for( let i = 0; i < allUsers.length; i++ ) { %>
