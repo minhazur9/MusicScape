@@ -70,5 +70,21 @@ router.put('/:playlistId', (req, res) => {
         })
 })
 
+// Delete Playlist
+router.delete('/:playlistId', (req, res) => {
+    const playlistId = req.params.playlistId;
+    db.Playlist.findByIdAndDelete(playlistId, (err) => {
+        if (err) return console.log(err);
+        db.User.findOne({ playlists: playlistId }, (err, foundUser) => {
+            if (err) return console.log(err);
+            foundUser.playlists.remove(playlistId);
+            foundUser.save((err, updatedUser) => {
+                if (err) return console.log(err);
+                res.redirect('/playlists')
+            })
+        })
+    })
+})
+
 
 module.exports = router
