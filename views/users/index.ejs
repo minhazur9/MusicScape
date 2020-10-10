@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Index</title>
+    <%- include('../partials/nav') %>
 </head>
 <body>
-    <a href="/users/new">Create New User</a>
+    
     <h1>All existing users</h1>
     <ul>
 <% for(let i = 0; i < allUsers.length; i++) { %>

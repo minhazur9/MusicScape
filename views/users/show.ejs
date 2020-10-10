@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Show page</title>
+    <%- include('../partials/nav') %>
 </head>
 <body>
-    <nav> <a href="/users"> All Users</a></nav>
+    
     <h1><%= user.name %> </h1>
-    <h2> <%= user.artist %></h2>
-    <h2> <%= user.playlists %> </h2>
+    <h2> Favorite Artist: <%= user.artist %></h2>
+    <h3>Playlists</h3>
+    <ul>
+<% for(i=0; i < user.playlists.length; i++) {%>
+<li class ="playlist-list">
+<a href= '/playlists/<%=user.playlists[i]._id %>'> <%=user.playlists[i].name %> </a>
 
+</li>
+
+<% } %>
+
+    </ul>
+  
+    
     <a href ="/users/<%= user._id %>/edit">
     <button>Edit User</button>
     </a>

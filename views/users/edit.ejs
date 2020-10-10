@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit user</title>
+    <%- include('../partials/nav') %>
 </head>
 <body>
+    
     <h2> Edit <%= user.name %> </h2>
 
     <form action = "/users/<%= user._id %>?_method=PUT" method = "POSt">
