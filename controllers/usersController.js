@@ -25,7 +25,6 @@ router.get('/new', (req, res) => {
 //POST NEW
 
 router.post('/', (req, res) => {
-
     db.User.create(req.body, (err, newUser) => {
         if(err) return console.log(err);
         console.log(newUser)

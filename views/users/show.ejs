@@ -23,12 +23,20 @@
     </ul>
   
     
+    <a href = "/playlists/new">
+    <button>Add Playlist</button>
+    </a>
+
+    <div>
     <a href ="/users/<%= user._id %>/edit">
     <button>Edit User</button>
     </a>
+    </div>
 
     <form action="/users/<%= user._id %>?_method=DELETE" method = "post">
     <input type= "submit" value= "Delete User">
     </form>
+
+
 </body>
 </html>
