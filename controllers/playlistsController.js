@@ -1,4 +1,5 @@
 const express = require('express')
+const { Playlist } = require('../models')
 const router = express.Router()
 
 const db = require('../models')

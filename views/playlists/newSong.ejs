@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Song</title>
 </head>
+
 <body>
+    <%- include('../partials/nav') %> 
     <h1>Add New Song</h1>
     <form action="/playlists/<%= foundPlaylist._id %>" method="POST">
         <div>
@@ -19,8 +22,14 @@
         </div>
 
         <div>
-            <input type="submit" value="Add Song">
+            <input type="submit" value="Confirm">
+        </div>
+    </form>
+    <form action="/playlists/<%= foundPlaylist._id %>" method="GET">
+        <div>
+            <input type="submit" value="Cancel">
         </div>
     </form>
 </body>
+
 </html>
