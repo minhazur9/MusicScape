@@ -1,0 +1,53 @@
+* {
+    font-family: 'Commissioner', sans-serif;
+    
+}
+body {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url('/images/download.png');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+   
+}
+.flex {
+    display: flex;
+}
+
+.logo {
+    font-size: 40px;
+    color: #2366f7;
+    position: relative;
+    align-items: flex-start;
+   
+
+}
+
+#music {
+    color: rgb(243, 243, 139)
+}
+a {
+    color: rgb(243, 243, 139);
+    background: #2366f7;
+    margin-right: 20px;
+    border: 1px solid #2366f7 ;
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#title {
+    background: none;
+    border: none;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -10px;
+    padding: 0px;
+    margin-bottom: 0px;
+    line-height: 0px;
+}
+
+

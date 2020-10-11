@@ -12,7 +12,7 @@
     <ul>
 <% for(let i = 0; i < allUsers.length; i++) { %>
     <li class = 'userlist'>
-        <a href="/users/<%=allUsers[i]._id %>"><%=allUsers[i].name %></a>
+        <a id="title" href="/users/<%=allUsers[i]._id %>"><%=allUsers[i].name %></a>
     </li>
 <% } %>
     </ul>
