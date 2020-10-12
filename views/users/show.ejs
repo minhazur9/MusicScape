@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Show page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href = "/users.css" rel="stylesheet">
     <%- include('../partials/nav') %>
 </head>
 <body>
-    
+    <div class ="index-front">
     <h1><%= user.name %> </h1>
     <h2> Favorite Artist: <%= user.artist %></h2>
     <h3>Playlists</h3>
@@ -22,21 +24,21 @@
 
     </ul>
   
-    
+    <div class= "playlist-edit">
     <a href = "/playlists/new">
-    <button>Add Playlist</button>
+    <button class="playlist-edit-button">Add Playlist</button>
     </a>
 
-    <div>
+    
     <a href ="/users/<%= user._id %>/edit">
-    <button>Edit User</button>
+    <button class="playlist-edit-button">Edit User</button>
     </a>
-    </div>
-
+    
+</div>
     <form action="/users/<%= user._id %>?_method=DELETE" method = "post">
-    <input type= "submit" value= "Delete User">
+    <input class = "delete-playlist" type= "submit" value= "Delete User">
     </form>
-
+</div>
 
 </body>
 </html>

@@ -1,10 +1,11 @@
 * {
     text-align: center;
     font-family: 'Commissioner', sans-serif;
-    color: white;
+    color: black;
+    margin: 0px;
 }
 body {
-    background: grey;
+    background: url('/images/background.png');
 }
 .flex {
     display: flex;
@@ -15,6 +16,7 @@ body {
     color: #2366f7;
     position: relative;
     align-items: flex-start;
+    margin-top: 35px;
    
 }
 
@@ -56,29 +58,102 @@ body {
     padding: 0px;
     margin-bottom: 0px;
     line-height: 0px;
+    text-decoration: none;
     
 }
 
-.userlist {
-    list-style: none;
-    margin: 15px;
-    position: relative;
-    right: 15px;
-    transition: all .3s ease-in-out;
-    width: 
+.index-front {
+    min-height: 90vh;
+    margin-top: 40px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-.userlist:hover {
-transform: scale(1.5)
+
+li {
+    list-style: none;
+    text-align: left;
+    font-size: 40px;
+    transition: background-color 0.1s ease-in;
+    margin-top: 10px;
+}
+
+li:hover {
+    background-color: rgba(151, 151, 151, 0.5);
 }
 
 #userlink {
     text-decoration: none;
-    transition: all .3s ease-in-out;
-    
+}
+
+.add {
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: #2366f7;
+    color: white; 
+}
+
+.text{
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+}
+
+label {
+    display: block;
+    font-size: 40px;
+    margin-left: 10px;
+    text-align: left;
     
 }
 
-#userlink:hover {
-    color: #2366f7;
-    transform: scale(1.5);
+form div {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.playlist-edit {
+    position: absolute;
+    left: 30px;
+    display: inline-block;
+    position: absolute;
+
+}
+
+.playlist-edit-button {
+    position: relative;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+    position: relative;
+    
+}
+
+.delete-playlist {
+    padding: 15px;
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(216, 26, 20);
+    color: white; 
+    border-color: white;
+}
+
+input {
+    text-align: left;
 }

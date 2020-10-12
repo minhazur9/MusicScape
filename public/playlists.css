@@ -34,6 +34,7 @@ body {
     font-size: 40px;
     display:block; 
     transition: background-color 0.1s ease-in;
+
 }
 
 .list:hover {
@@ -76,10 +77,12 @@ form div {
 li {
     text-align: left;
     margin-top: 10px;
-    margin-left: -35px;
+    
     margin-right: 20px;
-    border-bottom: solid grey 2px;
+    
 }
+
+
 
 #music {
     color: black;
