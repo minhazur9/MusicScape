@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href="/playlists.css" rel="stylesheet">
     <title>New Playlist</title>
 </head>
+
 <body>
-    <%- include('../partials/nav') %> 
-    <h1>Add Playlist</h1>
-    <form action="/playlists" method="POST">
-        <div>
-            <select name="user">
-                <% for( let i = 0; i < allUsers.length; i++ ) { %>
+    <%- include('../partials/nav') %>
+    <div class="index-front">
+        <h1>Add Playlist</h1>
+        <form action="/playlists" method="POST">
+            <div>
+                <select name="user">
+                    <% for( let i = 0; i < allUsers.length; i++ ) { %>
                     <option value=<%= allUsers[i]._id %>><%= allUsers[i].name %></option>
-                <% } %>
-                
-            </select>
-        </div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-        </div>
+                    <% } %>
 
-        <div>
-            <label for="genre">Central Genre</label>
-            <input type="text" name="genre" id="genre">
-        </div>
+                </select>
+            </div>
+            <div>
+                <label for="name">Name</label>
+                <input class="text" type="text" name="name" id="name">
+            </div>
 
-        <div>
-            <input type="submit" value="Add Playlist">
-        </div>
-    </form>
+            <div>
+                <label for="genre">Central Genre</label>
+                <input class="text" type="text" name="genre" id="genre">
+            </div>
+
+            <div>
+                <input class="add" type="submit" value="Add Playlist">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

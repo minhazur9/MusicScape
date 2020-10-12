@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href="/playlists.css" rel="stylesheet">
     <title>Edit</title>
 </head>
+
 <body>
     <%- include('../partials/nav') %>
-    <h1>Edit Playlist</h1>
-    <form action="/playlists/<%= foundPlaylist._id %>?_method=PUT" method="POST">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" value="<%= foundPlaylist.name %>">
-        </div>
+    <div class="index-front">
+        <h1>Edit Playlist</h1>
+        <form action="/playlists/<%= foundPlaylist._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input class='text' type="text" name="name" id="name" value="<%= foundPlaylist.name %>">
+            </div>
 
-        <div>
-            <label for="genre">Central Genre</label>
-            <input type="text" name="genre" id="genre" value="<%= foundPlaylist.genre %>">
-        </div>
+            <div>
+                <label for="genre">Central Genre</label>
+                <input class='text' type="text" name="genre" id="genre" value="<%= foundPlaylist.genre %>">
+            </div>
 
-        <div>
-            <input type="submit" value="Confirm Changes">
-        </div>
-    </form>
+            <div>
+                <input class="playlist-edit-button" type="submit" value="Confirm Changes">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

@@ -4,32 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href="/playlists.css" rel="stylesheet">
     <title>Show Playlist</title>
 </head>
 
 <body>
     <%- include('../partials/nav') %>
-    <h3>Name: <%= foundPlaylist.name %> </h3>
-    <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
-    <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
-    <h3>Songs: </h3>
-    <ul>
-        <% for( let i = 0; i < foundPlaylist.songs.length; i++ ) { %>
-                <li><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
-        <% } %>
-    </ul>
-    <div>
-        <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
-            <input type="submit" value="Add Song">
-        </form>
+    <div class="index-front">
+        <h3>Name: <%= foundPlaylist.name %> </h3>
+        <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
+        <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
+        <h3>Songs: </h3>
+        <ul>
+            <% for( let i = 0; i < foundPlaylist.songs.length; i++ ) { %>
+            <li class='song'><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
+            <% } %>
+        </ul>
+        <div class='show-form'>
+            <div class="playlist-edit">
+                <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
+                    <input class="playlist-edit-button" type="submit" value="Add Song">
+                </form>
 
-        <form action="/playlists/<%= foundPlaylist.id %>/edit" method="GET">
-            <input type="submit" value="Edit Playlist">
-        </form>
-
-        <form action="/playlists/<%= foundPlaylist.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete Playlist">
-        </form>
+                <form action="/playlists/<%= foundPlaylist.id %>/edit" method="GET">
+                    <input class="playlist-edit-button" type="submit" value="Edit Playlist">
+                </form>
+            </div>
+            <form action="/playlists/<%= foundPlaylist.id %>?_method=DELETE" method="POST">
+                <input class="delete-playlist" type="submit" value="Delete Playlist">
+            </form>
+        </div>
     </div>
 </body>
 
