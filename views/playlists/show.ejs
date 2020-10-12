@@ -18,7 +18,7 @@
         <h3>Songs: </h3>
         <ul>
             <% for( let i = 0; i < foundPlaylist.songs.length; i++ ) { %>
-            <li><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
+            <li class='song'><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
             <% } %>
         </ul>
         <div class='show-form'>

@@ -77,6 +77,7 @@ li {
     text-align: left;
     margin-top: 10px;
     margin-left: -35px;
+    margin-right: 20px;
     border-bottom: solid grey 2px;
 }
 
@@ -97,7 +98,7 @@ li {
 }
 
 
-nav a, #title {
+.nav-item, #title {
     color: white;
     background: #2366f7;
     margin-right: 20px;
@@ -149,9 +150,11 @@ h3 {
     font-size: 30px;
     margin-right: 5px;
     border-color: #2366f7;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: #2366f7;
-    color: white; 
+    color: white;
+    border-color: white; 
+    padding: 12px;
 }
 
 .show-form form {
@@ -159,12 +162,25 @@ h3 {
 }
 
 .delete-playlist {
+    padding: 15px;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     font-size: 30px;
-    right: 30px; 
-    border-radius: 3px;
+    font-weight: 700;
+    right: 40px; 
+    border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
+    border-color: white;
+}
+
+.song {
+    border:none;
+    font-size: 25px;
+}
+
+#cancel-song {
+    bottom: 135px;
+    left: 160px;
 }
 

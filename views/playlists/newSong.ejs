@@ -5,33 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
-    <link href = "styles.css" rel="stylesheet">
+    <link href="/playlists.css" rel="stylesheet">
     <title>New Song</title>
 </head>
 
 <body>
-    <%- include('../partials/nav') %> 
-    <h1>Add New Song</h1>
-    <form action="/playlists/<%= foundPlaylist._id %>" method="POST">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name">
-        </div>
+    <%- include('../partials/nav') %>
+    <div class="index-front">
+        <h1>Add New Song</h1>
+        <form action="/playlists/<%= foundPlaylist._id %>" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input class="text" type="text" name="name" id="name">
+            </div>
 
-        <div>
-            <label for="artist">Artist:</label>
-            <input type="text" name="artist" id="artist">
-        </div>
+            <div>
+                <label for="artist">Artist:</label>
+                <input class="text" type="text" name="artist" id="artist">
+            </div>
 
-        <div>
-            <input type="submit" value="Confirm">
-        </div>
-    </form>
-    <form action="/playlists/<%= foundPlaylist._id %>" method="GET">
-        <div>
-            <input type="submit" value="Cancel">
-        </div>
-    </form>
+            <div>
+                <input class="playlist-edit-button" type="submit" value="Confirm">
+            </div>
+        </form>
+        <form action="/playlists/<%= foundPlaylist._id %>" method="GET">
+            <div>
+                <input class="playlist-edit-button" id="cancel-song" type="submit" value="Cancel">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
