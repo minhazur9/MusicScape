@@ -62,9 +62,7 @@ a {
     border: none;
     position: absolute;
     margin-left: 10px;
-    
     padding: 0px;
-    
     line-height: 0px;
     
 }
@@ -101,7 +99,7 @@ nav {
     position: relative;
     background: #222222;
     margin: -10px;
-    max-width: 1250px
+    min-width: 1900px;
 
 }
 
@@ -111,7 +109,7 @@ nav {
     font-size: 30px;
     background: none;
     border: none;
-    left: -220px;
+    left: -550px;
     border-radius: 0;
    
     
