@@ -147,8 +147,9 @@ li:hover {
 label {
     display: block;
     font-size: 30px;
-    margin-left: 185px;
+    position: relative;
     text-align: left;
+    
     
 }
 
@@ -156,6 +157,7 @@ form div {
     margin-top: 50px;
     text-align: center;
     margin-left: 10px;
+    position: relative;
     
 }
 
@@ -168,6 +170,7 @@ form div {
 }
 
 .playlist-edit-button {
+    margin-top: 20px;
     position: relative;
     margin-top: -30px;
     margin-bottom: 40px;
@@ -179,7 +182,22 @@ form div {
     color: white;
     border-color: white; 
     padding: 12px;
+    
+    
+}
+
+.user-edit-button {
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
     
 }
 
