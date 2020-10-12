@@ -5,15 +5,19 @@
     <%- include('../partials/nav') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href="playlists.css" rel="stylesheet">
     <title>All Playlists</title>
 </head>
 
 <body>
-    <h1>List of All Playlists</h1>
-    <ul>
-        <% for( let i = 0; i < allPlaylists.length; i++ ) { %>
-        <li><a href="/playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %></a></li>
-        <% } %>
+    <div class='index-front'>
+        <h1>List of All Playlists</h1>
+        <ul>
+            <% for( let i = 0; i < allPlaylists.length; i++ ) { %>
+            <li><a class="list" href="/playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %></a></li>
+            <% } %>
+    </div>
     </ul>
 </body>
 
