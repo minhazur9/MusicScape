@@ -11,6 +11,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    min-width: 1250px;
+    
    
 }
 .flex {
@@ -200,4 +202,54 @@ h3 {
     right: 50px;
     font-size: 20px;
     
+}
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
+
+nav {
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: 0px;
+    min-width: 1900px;
+    
+
+}
+
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -545px;
+    border-radius: 0;
+    max-width: 120px;
+    
+   
+    
+}
+
+#users {
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 8px;
+    
+}
+
+#playlists {
+    border-right: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+
+
 }
