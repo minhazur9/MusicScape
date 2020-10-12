@@ -80,12 +80,21 @@ li {
     margin-top: 10px;
 }
 
+.list-title {
+    border-bottom: solid 2px black;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 55px;
+}
+
 li:hover {
     background-color: rgba(151, 151, 151, 0.5);
 }
 
 #userlink {
     text-decoration: none;
+    display: block;
+    margin-right: 35px;
 }
 
 .add {

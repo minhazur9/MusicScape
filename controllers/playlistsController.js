@@ -7,12 +7,14 @@ const db = require('../models')
 
 // Redirect to New Playlist
 router.get('/', (req, res) => {
-    db.Playlist.find({}, (err, allPlaylists) => {
+    db.Playlist.find()
+    .populate('user')
+    .exec((err, allPlaylists) => {
         if (err) return console.log(err);
         const context = { allPlaylists }
         res.render('playlists', context)
+    })  
     })
-})
 
 // New Playlist 
 router.get('/new', (req, res) => {
