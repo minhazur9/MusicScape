@@ -22,8 +22,6 @@ body {
     color: #2366f7;
     position: relative;
     align-items: flex-start;
-   
-
 }
 
 #music {
@@ -31,6 +29,7 @@ body {
     background-color: rgb(243, 243, 139);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    padding-right: 3px;
 }
 
 #scape {
@@ -51,6 +50,10 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
+.nav:hover:hover {
+    color: #2366f7;
+    background: white;
+}
 
 #title {
     background: none;
@@ -61,6 +64,7 @@ a {
     padding: 0px;
     margin-bottom: 0px;
     line-height: 0px;
+    
 }
 
 .front {
@@ -75,6 +79,10 @@ a {
 .front h2 {
     z-index: 2;
     color: black;
+}
+
+nav {
+    margin-top: 25px;
 }
 
 

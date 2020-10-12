@@ -1,21 +1,14 @@
 * {
-    font-family: 'Commissioner', sans-serif;
-    margin: 0px;   
-}
-
-body {
-    color: white;
-    background-color: rgba(0, 0, 0, 1);
-    background-image: url('/images/background.png');
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
     text-align: center;
-   
+    font-family: 'Commissioner', sans-serif;
+    color: black;
+    margin: 0px;
+}
+body {
+    background: url('/images/background.png');
 }
 .flex {
     display: flex;
-    position: absolute;
 }
 
 .logo {
@@ -24,71 +17,16 @@ body {
     position: relative;
     align-items: flex-start;
     margin-top: 35px;
+   
 }
-
-.list {
-    background: none;
-    border: none;
-    text-decoration: none;
-    color: black;
-    font-size: 40px;
-    display:block; 
-    transition: background-color 0.1s ease-in;
-
-}
-
-.list:hover {
-    background-color: rgba(151, 151, 151, 0.5);
-}
-
-label {
-    display: block;
-    font-size: 40px;
-    margin-left: 10px;
-    
-}
-
-select {
-    font-size: 30px;
-}
-
-.add {
-    font-size: 30px;
-    border-color: #2366f7;
-    border-radius: 3px;
-    margin-top: 10px;
-    background-color: #2366f7;
-    color: white; 
-}
-
-form div {
-    margin-top: 50px;
-    text-align: left;
-    margin-left: 10px;
-}
-
-.text{
-    font-size: 40px;
-    border-radius: 5px;
-    background-color: black;
-    color:white;
-}
-
-li {
-    text-align: left;
-    margin-top: 10px;
-    
-    margin-right: 20px;
-    
-}
-
-
 
 #music {
     color: black;
     background-color: rgb(243, 243, 139);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    padding-right: 3px;
+    
 }
 
 #scape {
@@ -98,10 +36,9 @@ li {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     padding-left: 2px;
+    
 }
-
-
-.nav-item, #title {
+.nav-item {
     color: white;
     background: #2366f7;
     margin-right: 20px;
@@ -112,18 +49,17 @@ li {
     font-size: 20px;
 }
 
-li {
-    list-style: none;
-}
-
 #title {
     background: none;
     border: none;
+    position: absolute;
     margin-left: 20px;
     margin-top: -5px;
     padding: 0px;
     margin-bottom: 0px;
     line-height: 0px;
+    text-decoration: none;
+    
 }
 
 .index-front {
@@ -136,15 +72,58 @@ li {
     margin-right: 20px;
 }
 
-h3 {
+li {
+    list-style: none;
     text-align: left;
     font-size: 40px;
-    margin-top: 20px;
+    transition: background-color 0.1s ease-in;
+    margin-top: 10px;
+}
+
+li:hover {
+    background-color: rgba(151, 151, 151, 0.5);
+}
+
+#userlink {
+    text-decoration: none;
+}
+
+.add {
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: #2366f7;
+    color: white; 
+}
+
+.text{
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+}
+
+label {
+    display: block;
+    font-size: 40px;
+    margin-left: 10px;
+    text-align: left;
+    
+}
+
+form div {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .playlist-edit {
     position: absolute;
     left: 30px;
+    display: inline-block;
+    position: absolute;
+
 }
 
 .playlist-edit-button {
@@ -158,10 +137,8 @@ h3 {
     color: white;
     border-color: white; 
     padding: 12px;
-}
-
-.show-form form {
-    display: inline;
+    position: relative;
+    
 }
 
 .delete-playlist {
@@ -177,13 +154,6 @@ h3 {
     border-color: white;
 }
 
-.song {
-    border:none;
-    font-size: 25px;
+input {
+    text-align: left;
 }
-
-#cancel-song {
-    bottom: 135px;
-    left: 160px;
-}
-

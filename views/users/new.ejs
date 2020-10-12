@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href = "/users.css" rel="stylesheet">
     <%- include('../partials/nav') %>
 </head>
 <body>
-    
+    <div class ="index-front">
     <h1>New User</h1>
 
     <form action = '/users' method ="POST">
@@ -15,20 +17,21 @@
         <label for="name">Name</label>
     
 
-    <input type = "text" id="name" name = "name">
+    <input class="text" type = "text" id="name" name = "name">
     </div>
     <div>
     <label for="password">Password</label>
-    <input type = "text" id="password" name="password">
+    <input class = "text" type = "text" id="password" name="password">
     </div>
     <div>
     <label for = "artist">Favorite Artist</label>
     
-    <input type = "text" id="artist" name="artist">
+    <input class="text" type = "text" id="artist" name="artist">
     </div>
     <div>
-    <button type = "submit"> Add User</button>
+    <button class="add" type = "submit"> Add User</button>
     </div>
     </form>
+    </div>
 </body>
 </html>
