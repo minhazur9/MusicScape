@@ -1,0 +1,130 @@
+* {
+    font-family: 'Commissioner', sans-serif;
+    margin: 0px;   
+}
+
+body {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url('/images/headphones.png');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    backdrop-filter: blur(10px);
+   
+}
+.flex {
+    display: flex;
+    position: absolute;
+}
+
+.logo {
+    font-size: 40px;
+    color: #2366f7;
+    position: relative;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+
+.list {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+}
+
+label {
+    display: block;
+    font-size: 40px;
+    margin-left: 10px;
+    
+}
+
+select {
+    font-size: 30px;
+}
+
+.add {
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: #2366f7;
+    color: white; 
+}
+
+form div {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.text{
+    font-size: 40px;
+    border-radius: 5px;
+}
+
+li {
+    text-align: left;
+    margin-top: 15px;
+}
+
+#music {
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#scape {
+    background-color: #2366f7;
+    margin-left: -9px;
+    color: white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding-left: 2px;
+}
+
+
+nav a, #title {
+    color: white;
+    background: #2366f7;
+    margin-right: 20px;
+    border: 1px solid #2366f7 ;
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+#title {
+    background: none;
+    border: none;
+    margin-left: 20px;
+    margin-top: -5px;
+    padding: 0px;
+    margin-bottom: 0px;
+    line-height: 0px;
+}
+
+.front {
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    height: 75%;
+    margin-left: 17%;
+    margin-top: 6%;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.front h2 {
+    z-index: 2;
+    color: black;
+}
+
