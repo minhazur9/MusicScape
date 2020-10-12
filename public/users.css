@@ -1,17 +1,10 @@
 * {
+    text-align: center;
     font-family: 'Commissioner', sans-serif;
-    
+    color: white;
 }
 body {
-    color: white;
-    background-color: rgba(0, 0, 0, 1);
-    background-image: url('/images/download.png');
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    backdrop-filter: blur(4px);
-   
+    background: grey;
 }
 .flex {
     display: flex;
@@ -22,6 +15,7 @@ body {
     color: #2366f7;
     position: relative;
     align-items: flex-start;
+   
 }
 
 #music {
@@ -30,6 +24,7 @@ body {
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     padding-right: 3px;
+    
 }
 
 #scape {
@@ -39,8 +34,9 @@ body {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     padding-left: 2px;
+    
 }
-a {
+.nav {
     color: white;
     background: #2366f7;
     margin-right: 20px;
@@ -49,10 +45,6 @@ a {
     padding: 3px;
     text-decoration: none;
     font-size: 20px;
-}
-.nav:hover:hover {
-    color: #2366f7;
-    background: white;
 }
 
 #title {
@@ -67,22 +59,26 @@ a {
     
 }
 
-.front {
-    border: 2px rgba(255, 255, 255, 0.07) solid;
-    width: 65%;
-    height: 75%;
-    margin-left: 17%;
-    margin-top: 6%;
-    background: rgba(255, 255, 255, 0.07);
+.userlist {
+    list-style: none;
+    margin: 15px;
+    position: relative;
+    right: 15px;
+    transition: all .3s ease-in-out;
+    width: 
+}
+.userlist:hover {
+transform: scale(1.5)
 }
 
-.front h2 {
-    z-index: 2;
-    color: black;
+#userlink {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    
+    
 }
 
-nav {
-    margin-top: 25px;
+#userlink:hover {
+    color: #2366f7;
+    transform: scale(1.5);
 }
-
-
