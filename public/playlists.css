@@ -11,6 +11,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    min-width: 1250px;
+    
    
 }
 .flex {
@@ -135,13 +137,15 @@ li {
 }
 
 .index-front {
-    min-height: 90vh;
+    
+    margin: 0 auto;
+    min-height: 650px;
+    max-width: 1100px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
     background-color: white;
     color:black;
-    margin-left: 20px;
-    margin-right: 20px;
+  
 }
 
 h3 {
@@ -151,7 +155,7 @@ h3 {
 }
 
 .playlist-edit {
-    position: absolute;
+    position: relative;
     left: 30px;
 }
 
@@ -159,7 +163,7 @@ h3 {
     position: relative;
     margin-top: 20px;
     font-size: 30px;
-    margin-right: 5px;
+    right: 280px;
     border-color: #2366f7;
     border-radius: 10px;
     background-color: #2366f7;
@@ -174,15 +178,16 @@ h3 {
 
 .delete-playlist {
     padding: 15px;
-    position: absolute;
-    bottom: 20px;
+    position: relative;
+    left: 200px;
     font-size: 30px;
     font-weight: 700;
-    right: 40px; 
+    
     border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
     border-color: white;
+
 }
 
 .song {
@@ -200,4 +205,66 @@ h3 {
     right: 50px;
     font-size: 20px;
     
+}
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
+
+nav {
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: 0px;
+    min-width: 1900px;
+    
+
+}
+
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -545px;
+    border-radius: 0;
+    max-width: 120px;
+    
+   
+    
+}
+
+#users {
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 8px;
+    
+}
+
+#playlists {
+    border-right: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+
+
+}
+
+.song-edit-button {
+    position: relative;
+    margin-top: 20px;
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
 }

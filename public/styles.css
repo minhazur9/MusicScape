@@ -6,11 +6,13 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/download.png');
-    height: 100vh;
+    height: 900px;
+    min-width: 1250px;
+    
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
    
 }
 .flex {
@@ -59,10 +61,8 @@ a {
     background: none;
     border: none;
     position: absolute;
-    margin-left: 20px;
-    margin-top: -5px;
+    margin-left: 10px;
     padding: 0px;
-    margin-bottom: 0px;
     line-height: 0px;
     
 }
@@ -70,19 +70,65 @@ a {
 .front {
     border: 2px rgba(255, 255, 255, 0.07) solid;
     width: 65%;
-    height: 75%;
+    min-height: 600px;
+    min-width: 700px;
+    
     margin-left: 17%;
-    margin-top: 6%;
+    margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
 }
 
 .front h2 {
     z-index: 2;
-    color: black;
+    color: white;
+    font-size: 55px;
+    
+
+}
+
+
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
 }
 
 nav {
-    margin-top: 25px;
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: -10px;
+    min-width: 1900px;
+
 }
 
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -550px;
+    border-radius: 0;
+   
+    
+}
 
+#users {
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 8px;
+}
+
+#playlists {
+    border-right: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+
+}

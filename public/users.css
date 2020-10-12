@@ -6,6 +6,8 @@
 }
 body {
     background: url('/images/background.png');
+    
+    min-width: 1250px;
 }
 .flex {
     display: flex;
@@ -42,6 +44,8 @@ body {
     color: white;
     background: #2366f7;
     margin-right: 20px;
+    
+    
     border: 1px solid #2366f7 ;
     border-radius: 8px;
     padding: 3px;
@@ -59,17 +63,22 @@ body {
     margin-bottom: 0px;
     line-height: 0px;
     text-decoration: none;
+    margin-left: 10px;
     
 }
 
 .index-front {
-    min-height: 90vh;
+    margin: 0 auto;
+    min-height: 700px;
+    min-width: 900px;
+    max-width: 900px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
     background-color: white;
     color:black;
-    margin-left: 20px;
-    margin-right: 20px;
+ 
+    
+
 }
 
 li {
@@ -97,8 +106,10 @@ li:hover {
     margin-right: 35px;
 }
 .user-front {
-    max-width: 80vw;
-    min-height: 90vh;
+    max-width: 940px;
+    min-width: 900px;
+    min-height: 700px;
+
     margin: 0 auto;
     margin-top: 70px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -106,9 +117,10 @@ li:hover {
     color:black;
 }
 .edit-front {
-    max-width: 80vw;
-    max-height: 80vh;
-    min-height: 70vh;
+    max-width: 940px;
+    min-width: 700px;
+    max-height: 79%;
+    min-height: 80%;
     margin: 0 auto;
     margin-top: 70px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -147,8 +159,10 @@ li:hover {
 label {
     display: block;
     font-size: 30px;
-    margin-left: 185px;
+    position: relative;
     text-align: left;
+    top: 40px;
+    
     
 }
 
@@ -156,18 +170,20 @@ form div {
     margin-top: 50px;
     text-align: center;
     margin-left: 10px;
+    position: relative;
+    
     
 }
 
 .playlist-edit {
-    position: absolute;
-    left: 30px;
+    position: relative;
+    left: -250px;
     display: inline-block;
-    position: absolute;
 
 }
 
 .playlist-edit-button {
+    margin-top: 20px;
     position: relative;
     margin-top: -30px;
     margin-bottom: 40px;
@@ -179,21 +195,52 @@ form div {
     color: white;
     border-color: white; 
     padding: 12px;
-    position: relative;
     
+    
+}
+
+.user-edit-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+    border-left: none;
+    
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
 }
 
 .delete-playlist {
     padding: 15px;
-    position: absolute;
+    position: relative;
     bottom: 20px;
     font-size: 30px;
-    font-weight: 700;
     right: 40px; 
     border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
     border-color: white;
+    left: 570px;
+    top: -80px;
 }
 
 input {
@@ -206,6 +253,74 @@ input {
 
 .playlist-list {
     text-decoration: none;
+    text-align: center;
+    position: relative;
+    right: 12px;
+    font-size: 30px
+
+}
+
+.playlist-list:hover {
+    background-color: white;
+}
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
+
+nav {
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: 0px;
+    min-width: 1900px;
     
+
+}
+
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -545px;
+    border-radius: 0;
+    max-width: 120px;
     
+   
+    
+}
+
+#users {
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-bottom: 8px;
+    
+}
+
+#playlists {
+    border-right: solid 1px white;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+#userheader {
+    font-size: 60px;
+}
+
+#userartist {
+    font-size: 40px;
+}
+
+#userplaylists {
+    margin-top: 15px;
+    text-decoration: underline
 }
