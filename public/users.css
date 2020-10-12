@@ -96,14 +96,45 @@ li:hover {
     display: block;
     margin-right: 35px;
 }
+.user-front {
+    max-width: 80vw;
+    min-height: 90vh;
+    margin: 0 auto;
+    margin-top: 70px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+}
+.edit-front {
+    max-width: 80vw;
+    max-height: 80vh;
+    min-height: 70vh;
+    margin: 0 auto;
+    margin-top: 70px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+}
+
+.new-title {
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+
+
 
 .add {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 20px;
     font-size: 30px;
+    margin-right: 5px;
     border-color: #2366f7;
-    border-radius: 3px;
-    margin-top: 10px;
+    border-radius: 10px;
     background-color: #2366f7;
-    color: white; 
+    color: white;
+    border-color: white; 
+    padding: 12px;
 }
 
 .text{
@@ -115,16 +146,17 @@ li:hover {
 
 label {
     display: block;
-    font-size: 40px;
-    margin-left: 10px;
+    font-size: 30px;
+    margin-left: 185px;
     text-align: left;
     
 }
 
 form div {
     margin-top: 50px;
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
+    
 }
 
 .playlist-edit {
@@ -137,7 +169,8 @@ form div {
 
 .playlist-edit-button {
     position: relative;
-    margin-top: 20px;
+    margin-top: -30px;
+    margin-bottom: 40px;
     font-size: 30px;
     margin-right: 5px;
     border-color: #2366f7;
@@ -165,4 +198,14 @@ form div {
 
 input {
     text-align: left;
+}
+
+.edit-title {
+    font-size: 40px;
+}
+
+.playlist-list {
+    text-decoration: none;
+    
+    
 }

@@ -197,6 +197,7 @@ h3 {
 
 #made-by {
     position: absolute;
-    right: 50px
+    right: 50px;
+    font-size: 20px;
     
 }
