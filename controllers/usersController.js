@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     db.User.create(req.body, (err, newUser) => {
         if(err) return console.log(err);
         console.log(newUser)
-        res.redirect('/users')
+        res.redirect(`/users/${newUser._id}`)
     })
 })
 

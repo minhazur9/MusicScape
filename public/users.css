@@ -63,13 +63,17 @@ body {
 }
 
 .index-front {
-    min-height: 90vh;
+    margin: 0 auto;
+    min-height: 700px;
+    min-width: 900px;
+    max-width: 900px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
     background-color: white;
     color:black;
-    margin-left: 20px;
-    margin-right: 20px;
+ 
+    
+
 }
 
 li {
@@ -97,8 +101,10 @@ li:hover {
     margin-right: 35px;
 }
 .user-front {
-    max-width: 80vw;
-    min-height: 90vh;
+    max-width: 940px;
+    min-width: 900px;
+    min-height: 700px;
+
     margin: 0 auto;
     margin-top: 70px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -106,9 +112,10 @@ li:hover {
     color:black;
 }
 .edit-front {
-    max-width: 80vw;
-    max-height: 80vh;
-    min-height: 70vh;
+    max-width: 940px;
+    min-width: 700px;
+    max-height: 79%;
+    min-height: 80%;
     margin: 0 auto;
     margin-top: 70px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -149,6 +156,7 @@ label {
     font-size: 30px;
     position: relative;
     text-align: left;
+    top: 40px;
     
     
 }
@@ -159,13 +167,13 @@ form div {
     margin-left: 10px;
     position: relative;
     
+    
 }
 
 .playlist-edit {
-    position: absolute;
-    left: 30px;
+    position: relative;
+    left: -250px;
     display: inline-block;
-    position: absolute;
 
 }
 
@@ -190,6 +198,22 @@ form div {
     position: relative;
     margin-top: 20px;
     margin-bottom: 40px;
+    margin: 10px;
+    font-size: 30px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+    border-left: none;
+    
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
     font-size: 30px;
     margin-right: 5px;
     border-color: #2366f7;
@@ -198,20 +222,20 @@ form div {
     color: white;
     border-color: white; 
     padding: 12px;
-    
 }
 
 .delete-playlist {
     padding: 15px;
-    position: absolute;
+    position: relative;
     bottom: 20px;
     font-size: 30px;
-    font-weight: 700;
     right: 40px; 
     border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
     border-color: white;
+    left: 570px;
+    top: -80px;
 }
 
 input {
@@ -224,6 +248,9 @@ input {
 
 .playlist-list {
     text-decoration: none;
-    
-    
+
+}
+
+.playlist-list:hover {
+    background-color: white;
 }

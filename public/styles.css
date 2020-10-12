@@ -10,7 +10,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
    
 }
 .flex {
@@ -78,11 +78,20 @@ a {
 
 .front h2 {
     z-index: 2;
-    color: black;
+    color: white;
+    font-size: 55px;
+    
+
 }
 
 nav {
     margin-top: 25px;
 }
 
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
 
