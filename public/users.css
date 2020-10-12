@@ -253,6 +253,10 @@ input {
 
 .playlist-list {
     text-decoration: none;
+    text-align: center;
+    position: relative;
+    right: 12px;
+    font-size: 30px
 
 }
 
