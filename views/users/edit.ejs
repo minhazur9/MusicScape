@@ -9,8 +9,8 @@
     <%- include('../partials/nav') %>
 </head>
 <body>
-    <div class="index-front">
-    <h2> Edit <%= user.name %> </h2>
+    <div class="edit-front">
+    <h2 class="edit-title"> Edit <%= user.name %> </h2>
 
     <form action = "/users/<%= user._id %>?_method=PUT" method = "POSt">
         <div>

@@ -114,6 +114,14 @@ li {
 
 li {
     list-style: none;
+    display: block;
+}
+
+.list-title {
+    border-bottom: solid 2px black;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 55px;
 }
 
 #title {
@@ -187,3 +195,9 @@ h3 {
     left: 160px;
 }
 
+#made-by {
+    position: absolute;
+    right: 50px;
+    font-size: 20px;
+    
+}
