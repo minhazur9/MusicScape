@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class ="index-front">
-    <h1><%= user.name %> </h1>
-    <h2> Favorite Artist: <%= user.artist %></h2>
-    <h2>Playlists</h2>
+    <h1 id="userheader"><%= user.name %> </h1>
+    <h2 id="userartist"> Favorite Artist: <%= user.artist %></h2>
+    <h2 id="userplaylists">Playlists</h2>
     <ul>
 <% for(i=0; i < user.playlists.length; i++) {%>
 <li class ="playlist-list">

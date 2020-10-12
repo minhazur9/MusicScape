@@ -6,7 +6,7 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/download.png');
-    height: 1300px;
+    height: 900px;
     min-width: 1250px;
     
     background-size: cover;
@@ -72,6 +72,7 @@ a {
     width: 65%;
     min-height: 600px;
     min-width: 700px;
+    
     margin-left: 17%;
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
