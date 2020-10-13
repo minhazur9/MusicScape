@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
-    <link href="/playlists.css" rel="stylesheet">
+    <link href="/css/playlists.css" rel="stylesheet">
     <title>Edit</title>
 </head>
 
 <body>
     <%- include('../partials/nav') %>
-    <div class="index-front">
+    <div class="playlist-edit-front">
         <h1>Edit Playlist</h1>
         <form action="/playlists/<%= foundPlaylist._id %>?_method=PUT" method="POST">
             <div>
@@ -25,7 +25,7 @@
             </div>
 
             <div>
-                <input class="playlist-edit-button" type="submit" value="Confirm Changes">
+                <input class="user-changes-button" type="submit" value="Confirm Changes">
             </div>
         </form>
     </div>
