@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
+const passport = require('passport')
+
 
 
 
@@ -16,6 +18,24 @@ router.get('/', (req, res) => {
     
 })
 
+
+//GET SIGN IN
+
+router.get('/signin', (req, res) => {
+    
+    res.render('users/signin')
+    
+})
+
+router.post('/signin', passport.authenticate('local', {
+    sucessRedirect: '/users',
+    failureRedirect: '/users/signin',
+    failureFlash: true
+    
+}
+))
+
+
 //GET NEW
 
 router.get('/new', (req, res) => {
@@ -25,12 +45,21 @@ router.get('/new', (req, res) => {
 //POST NEW
 
 router.post('/', (req, res) => {
+
+
     db.User.create(req.body, (err, newUser) => {
-        if(err) return console.log(err);
-        console.log(newUser)
+
+        // if(err) return console.log(err);
+        // console.log(newUser)
+        try {
+            
         res.redirect(`/users/${newUser._id}`)
+        } catch{
+            res.redirect('/users/new')
+        }
     })
 })
+
 
 //GET EDIT
 

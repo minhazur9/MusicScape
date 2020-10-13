@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href = "/css/users.css" rel="stylesheet">
+</head>
+<body>
+    <% if(messages.error) { %>
+    <%= messages.error %> 
+<% } %>
+    <div class ="edit-front">
+        <h1 class="new-title">Sign In</h1>
+    
+        <form action = '/users/signin' method ="POST">
+        
+    
+        <div>
+            <label for= "email">Email</label>
+            <input class = "text" type = "text" id="email" name="email">
+            </div>
+    
+        <div>
+        <label for="password">Password</label>
+        <input class = "text" type = "text" id="password" name="password">
+        </div>
+    
+    
+        
+        <div>
+        <button class="add" type = "submit"> Login</button>
+        </div>
+        </form>
+        </div>
+</body>
+</html>

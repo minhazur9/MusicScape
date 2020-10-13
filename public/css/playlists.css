@@ -95,6 +95,7 @@ li {
     background-color: rgb(243, 243, 139);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    padding-right: 3px;
 }
 
 #scape {
