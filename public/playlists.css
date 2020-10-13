@@ -299,3 +299,48 @@ nav {
     background-color: white;
     color:black;
 }
+
+.warning {
+    border: solid 3px red;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: white;
+    position: relative;
+    left: 550px;
+    width: 400px;
+    height: 150px;
+    bottom: 500px;
+    filter: blur(0px);
+}
+
+.warning h4 {
+    position: absolute;
+    left: 40px;
+    color: black;
+    font-size: 30px;
+}
+
+.warning-button-yes {
+    background-color: red;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 240px;
+    padding: 3px;
+    font-size: 35px;
+    padding-right: 20px;
+}
+
+.warning-button-no {
+    position: absolute;
+    background-color: #2366F7;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 50px;
+    padding: 3px;
+    font-size: 35px;
+}
