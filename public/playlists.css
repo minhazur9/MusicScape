@@ -44,8 +44,10 @@ body {
 
 label {
     display: block;
-    font-size: 40px;
-    margin-left: 10px;
+    font-size: 30px;
+    position: relative;
+    text-align: left;
+    top: 40px;
     
 }
 
@@ -60,12 +62,15 @@ select {
     margin-top: 10px;
     background-color: #2366f7;
     color: white; 
+    padding: 12px;
+    border-radius: 10px;
 }
 
 form div {
     margin-top: 50px;
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
+    position: relative;
 }
 
 .text{
@@ -140,7 +145,6 @@ li {
     margin: 0 auto;
     min-height: 600px;
     max-width: 1100px;
-    max-width: 1100px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
     background-color: white;
@@ -197,7 +201,7 @@ h3 {
 
 #cancel-song {
     bottom: 135px;
-    left: 160px;
+    left: 110px;
 }
 
 #made-by {
@@ -268,4 +272,30 @@ nav {
     color: white;
     border-color: white; 
     padding: 12px;
+    right: 120px;
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+}
+
+.playlist-edit-front {
+    position: relative;
+    margin: 0 auto;
+    min-height: 600px;
+    max-width: 900px;
+    margin-top: 40px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
 }

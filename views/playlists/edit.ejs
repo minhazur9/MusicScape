@@ -11,7 +11,7 @@
 
 <body>
     <%- include('../partials/nav') %>
-    <div class="index-front">
+    <div class="playlist-edit-front">
         <h1>Edit Playlist</h1>
         <form action="/playlists/<%= foundPlaylist._id %>?_method=PUT" method="POST">
             <div>
@@ -25,7 +25,7 @@
             </div>
 
             <div>
-                <input class="playlist-edit-button" type="submit" value="Confirm Changes">
+                <input class="user-changes-button" type="submit" value="Confirm Changes">
             </div>
         </form>
     </div>
