@@ -7,13 +7,12 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/background.png');
-    height: 100vh;
+    min-height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     min-width: 1250px;
-    
-   
+    overflow-x: hidden;
 }
 .flex {
     display: flex;
@@ -45,8 +44,10 @@ body {
 
 label {
     display: block;
-    font-size: 40px;
-    margin-left: 10px;
+    font-size: 30px;
+    position: relative;
+    text-align: left;
+    top: 40px;
     
 }
 
@@ -61,12 +62,15 @@ select {
     margin-top: 10px;
     background-color: #2366f7;
     color: white; 
+    padding: 12px;
+    border-radius: 10px;
 }
 
 form div {
     margin-top: 50px;
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
+    position: relative;
 }
 
 .text{
@@ -137,9 +141,9 @@ li {
 }
 
 .index-front {
-    
+    position: relative;
     margin: 0 auto;
-    min-height: 650px;
+    min-height: 600px;
     max-width: 1100px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -197,13 +201,14 @@ h3 {
 
 #cancel-song {
     bottom: 135px;
-    left: 160px;
+    left: 110px;
 }
 
 #made-by {
     position: absolute;
-    right: 50px;
+    right: 30px;
     font-size: 20px;
+    text-align: right;
     
 }
 
@@ -267,4 +272,75 @@ nav {
     color: white;
     border-color: white; 
     padding: 12px;
+    right: 120px;
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+}
+
+.playlist-edit-front {
+    position: relative;
+    margin: 0 auto;
+    min-height: 600px;
+    max-width: 900px;
+    margin-top: 40px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+}
+
+.warning {
+    border: solid 3px red;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: white;
+    position: relative;
+    left: 550px;
+    width: 400px;
+    height: 150px;
+    bottom: 500px;
+    filter: blur(0px);
+}
+
+.warning h4 {
+    position: absolute;
+    left: 40px;
+    color: black;
+    font-size: 30px;
+}
+
+.warning-button-yes {
+    background-color: red;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 240px;
+    padding: 3px;
+    font-size: 35px;
+    padding-right: 20px;
+}
+
+.warning-button-no {
+    position: absolute;
+    background-color: #2366F7;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 50px;
+    padding: 3px;
+    font-size: 35px;
 }
