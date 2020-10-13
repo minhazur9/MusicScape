@@ -13,6 +13,7 @@ $('.delete-playlist').on('click', function() {
 
 function addCancel() {
     $('.warning-button-no').on('click', function() {
+        $('#delete').appendTo('body');
         $('.warning').remove();
         $('.index-front').css('filter', 'none');
     })
