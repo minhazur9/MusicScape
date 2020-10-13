@@ -7,13 +7,12 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/background.png');
-    height: 100vh;
+    min-height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     min-width: 1250px;
-    
-   
+    overflow-x: hidden;
 }
 .flex {
     display: flex;
@@ -137,9 +136,10 @@ li {
 }
 
 .index-front {
-    
+    position: relative;
     margin: 0 auto;
-    min-height: 650px;
+    min-height: 600px;
+    max-width: 1100px;
     max-width: 1100px;
     margin-top: 40px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -202,8 +202,9 @@ h3 {
 
 #made-by {
     position: absolute;
-    right: 50px;
+    right: 30px;
     font-size: 20px;
+    text-align: right;
     
 }
 
