@@ -2,6 +2,7 @@
 // Event Listeners
 
 $('.delete-playlist').on('click', function() {
+    console.log('delete')
     $('#delete').show();
     $('.index-front').css('filter', 'blur(8px)');
     $('body').append(`<div class="warning"><h4>Are you sure? <br>It will be gone forever!</h4>
