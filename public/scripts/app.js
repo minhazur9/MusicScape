@@ -18,6 +18,7 @@ function addCancel() {
         $('#delete').appendTo('body').hide();
         $('.warning').remove();
         $('.index-front').css('filter', 'none');
+        $('#delete').hide();
     })
 }
 
