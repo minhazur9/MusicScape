@@ -83,11 +83,10 @@ router.post('/', (req, res) => {
         if (err) return console.log(err);
         console.log(newUser)
         res.redirect(`/users/${newUser._id}`)
-        } catch{
-            res.redirect('/users/new')
-        }
+    
     })
 })
+
 
 
 //GET EDIT

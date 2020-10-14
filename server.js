@@ -7,24 +7,7 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
-<<<<<<< HEAD
-const db = require('./models')
 
-
-
-const initializePassport = require('./passport-config')
-initializePassport(
-    passport,
-    email => db.User.findOne({email : email}, (err, foundUser) =>{
-        if(err) return err;
-        return foundUser
-    })
-    
-)
-
-=======
-const session = require('express-session')
->>>>>>> submaster
 
 require('dotenv').config()
 const PORT = process.env.PORT || 4000
