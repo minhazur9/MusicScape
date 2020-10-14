@@ -1,10 +1,10 @@
-
+$('#delete').hide()
 // Event Listeners
 
 $('.delete-playlist').on('click', function() {
-    console.log('delete')
-    $('#delete').show();
+    $('#delete').show()
     $('.index-front').css('filter', 'blur(8px)');
+    $('#delete').show()
     $('body').append(`<div class="warning"><h4>Are you sure? <br>It will be gone forever!</h4>
     <input class="warning-button-no" type="submit" value="No..">
     <input class="warning-button-yes" type="submit" value="Yes"></div>`);
@@ -15,9 +15,10 @@ $('.delete-playlist').on('click', function() {
 
 function addCancel() {
     $('.warning-button-no').on('click', function() {
-        $('#delete').appendTo('body');
+        $('#delete').appendTo('body').hide();
         $('.warning').remove();
         $('.index-front').css('filter', 'none');
         $('#delete').hide();
     })
 }
+

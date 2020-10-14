@@ -6,8 +6,7 @@
 }
 body {
     background: url('/images/background.png');
-    
-    min-width: 1250px;
+    min-width: 100vh;
 }
 .flex {
     display: flex;
@@ -69,6 +68,7 @@ body {
 
 .index-front {
     margin: 0 auto;
+    position: relative;
     min-height: 700px;
     min-width: 900px;
     max-width: 900px;
@@ -176,8 +176,9 @@ form div {
 
 .playlist-edit {
     position: relative;
-    left: -250px;
+    right: 200px;
     display: inline-block;
+    margin-top: 30px;
 
 }
 
@@ -199,7 +200,7 @@ form div {
 }
 
 .user-edit-button {
-    position: relative;
+    
     margin-top: 20px;
     margin-bottom: 40px;
     margin: 10px;
@@ -229,9 +230,8 @@ form div {
 }
 
 .delete-playlist {
-    padding: 15px;
-    position: relative;
-    bottom: 20px;
+    padding: 10px;
+    position: absolute;
     font-size: 30px;
     right: 40px; 
     border-radius: 12px;
@@ -239,7 +239,8 @@ form div {
     color: white; 
     border-color: white;
     left: 570px;
-    top: -80px;
+    top: 10px;
+    
 }
 
 input {
@@ -260,7 +261,8 @@ input {
 }
 
 .playlist-list:hover {
-    background-color: white;
+    background-color: rgba( 0, 0, 0, 0,);
+    
 }
 
 #signup {
@@ -322,6 +324,51 @@ nav {
 #userplaylists {
     margin-top: 15px;
     text-decoration: underline
+}
+
+.warning {
+    border: solid 3px red;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: white;
+    position: relative;
+    left: 550px;
+    width: 400px;
+    height: 150px;
+    bottom: 500px;
+    filter: blur(0px);
+}
+
+.warning h4 {
+    position: absolute;
+    left: 40px;
+    color: black;
+    font-size: 30px;
+}
+
+.warning-button-yes {
+    background-color: red;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 240px;
+    padding: 3px;
+    font-size: 35px;
+    padding-right: 20px;
+}
+
+.warning-button-no {
+    position: absolute;
+    background-color: #2366F7;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    bottom: 0px;
+    left: 50px;
+    padding: 3px;
+    font-size: 35px;
 }
 
 .logout {
