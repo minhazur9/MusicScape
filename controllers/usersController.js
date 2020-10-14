@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-const passport = require('passport')
 
 
 //GET INDEX
@@ -21,25 +20,17 @@ router.get('/', (req, res) => {
 //GET SIGN IN
 
 router.get('/signin', (req, res) => {
-    
-    res.render('users/signin')
-    
-})
 
-router.post('/signin', passport.authenticate('local', {
-    sucessRedirect: '/',
-    failureRedirect: '/users/signin',
-    failureFlash: true
-    
-}
-))
+    res.render('users/signin')
+
+})
 
 
 //GET NEW
 
 router.get('/new', (req, res) => {
-    const context = {loggedIn: req.session.user}
-    res.render('users/new',context)
+    const context = { loggedIn: req.session.user }
+    res.render('users/new', context)
 })
 
 // Login
@@ -63,7 +54,7 @@ router.post('/login', (req, res) => {
             return res.redirect('/users/login');
         }
         req.session.user = user;
-        return res.redirect('/');
+        return res.redirect(`/users/${user._id}`);
 
     })
 })
@@ -83,7 +74,7 @@ router.post('/', (req, res) => {
         if (err) return console.log(err);
         console.log(newUser)
         res.redirect(`/users/${newUser._id}`)
-    
+
     })
 })
 
@@ -92,9 +83,6 @@ router.post('/', (req, res) => {
 //GET EDIT
 
 router.get('/:userId/edit', (req, res) => {
-    if (!req.session.user) {
-        return res.redirect('/404');
-    }
     db.User.findById(req.params.userId, (err, foundUser) => {
         if (err) return console.log(err)
 
@@ -128,14 +116,24 @@ router.get('/:userId', (req, res) => {
         .populate('playlists')
         .exec((err, foundUser) => {
             if (err) return console.log(err);
-            console.log('foundUser', foundUser)
-
-            const context = {
-                user: foundUser,
-                loggedIn: req.session.user
+            if (!req.session.user) {
+                const context = {
+                    user: foundUser,
+                    loggedIn: req.session.user,
+                    userLoggedIn: false
+                }
+                res.render('users/show', context)
+            }
+            else {
+                const context = {
+                    user: foundUser,
+                    loggedIn: req.session.user,
+                    userLoggedIn: req.session.user._id == req.params.userId
+                }
+                res.render('users/show', context)
             }
 
-            res.render('users/show', context)
+
         })
 })
 

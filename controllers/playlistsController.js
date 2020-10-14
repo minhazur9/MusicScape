@@ -66,11 +66,23 @@ router.get('/:playlistId', (req, res) => {
         .populate('user')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
-            const context = {
-                foundPlaylist,
-                loggedIn: req.session.user
-            };
-            res.render('playlists/show', context);
+            if (!req.session.user) {
+                const context = {
+                    foundPlaylist,
+                    loggedIn: req.session.user,
+                    userLoggedIn: false
+                }
+                res.render('playlists/show', context);
+            }
+            else {
+                const context = {
+                    foundPlaylist,
+                    loggedIn: req.session.user,
+                    userLoggedIn: req.session.user._id == foundPlaylist.user._id
+                };
+                res.render('playlists/show', context);
+            }
+            
         });
 });
 

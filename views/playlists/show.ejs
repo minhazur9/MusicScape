@@ -23,6 +23,7 @@
             <li class='song'><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
             <% } %>
         </ul>
+        <% if (userLoggedIn) { %>
         <div class='show-form'>
             <div class="playlist-edit">
                 <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
@@ -37,6 +38,7 @@
             <form id="delete" action="/playlists/<%= foundPlaylist.id %>?_method=DELETE" method="POST">
             </form>
         </div>
+        <% } %>
     </div>
 </body>
 
