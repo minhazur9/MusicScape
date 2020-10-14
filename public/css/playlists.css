@@ -7,7 +7,7 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/background.png');
-    min-height: 600px;
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -95,6 +95,7 @@ li {
     background-color: rgb(243, 243, 139);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    padding-right: 3px;
 }
 
 #scape {
