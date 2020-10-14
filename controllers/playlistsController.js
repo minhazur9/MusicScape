@@ -8,19 +8,25 @@ const db = require('../models')
 // Redirect to New Playlist
 router.get('/', (req, res) => {
     db.Playlist.find()
-    .populate('user')
-    .exec((err, allPlaylists) => {
-        if (err) return console.log(err);
-        const context = { allPlaylists }
-        res.render('playlists', context)
-    })  
-    })
+        .populate('user')
+        .exec((err, allPlaylists) => {
+            if (err) return console.log(err);
+            const context = {
+                allPlaylists,
+                loggedIn: req.session.user
+            }
+            res.render('playlists', context)
+        })
+})
 
 // New Playlist 
 router.get('/new', (req, res) => {
     db.User.find({}, (err, allUsers) => {
         if (err) return console.log(err);
-        const context = { allUsers }
+        const context = {
+            allUsers,
+            loggedIn: req.session.user
+        }
         res.render('playlists/new', context);
     })
 })
@@ -41,7 +47,7 @@ router.post('/', (req, res) => {
 })
 
 // Create Song
-router.post('/:playlistId', (req,res) => {
+router.post('/:playlistId', (req, res) => {
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
         if (err) return console.log(err);
         console.log(req.body);
@@ -60,7 +66,10 @@ router.get('/:playlistId', (req, res) => {
         .populate('user')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
-            const context = { foundPlaylist };
+            const context = {
+                foundPlaylist,
+                loggedIn: req.session.user
+            };
             res.render('playlists/show', context);
         });
 });
@@ -69,7 +78,10 @@ router.get('/:playlistId', (req, res) => {
 router.get('/:playlistId/edit', (req, res) => {
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
         if (err) return console.log(err);
-        const context = { foundPlaylist };
+        const context = {
+            foundPlaylist,
+            loggedIn: req.session.user
+        };
         res.render('playlists/edit', context);
     })
 
@@ -79,8 +91,11 @@ router.get('/:playlistId/edit', (req, res) => {
 router.get('/:playlistId/newSong', (req, res) => {
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
         if (err) return console.log(err);
-        const context = { foundPlaylist };
-        res.render('playlists/newSong',context);
+        const context = {
+            foundPlaylist,
+            loggedIn: req.session.user
+        };
+        res.render('playlists/newSong', context);
     })
 })
 

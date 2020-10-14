@@ -344,3 +344,20 @@ nav {
     padding: 3px;
     font-size: 35px;
 }
+
+.logout {
+    position: relative;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -550px;
+    border-radius: 0;
+    color: white;
+    left: 500px;
+    top: -25px;
+    border-left: solid 2px white;
+    padding-bottom: 15px;
+    margin-top: -5px;
+    cursor: pointer;
+    outline: none;
+}
