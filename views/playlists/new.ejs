@@ -15,14 +15,6 @@
         <h1>Add Playlist</h1>
         <form action="/playlists" method="POST">
             <div>
-                <select name="user">
-                    <% for( let i = 0; i < allUsers.length; i++ ) { %>
-                    <option value=<%= allUsers[i]._id %>><%= allUsers[i].name %></option>
-                    <% } %>
-
-                </select>
-            </div>
-            <div>
                 <label for="name">Name</label>
                 <input class="text" type="text" name="name" id="name">
             </div>
@@ -35,6 +27,10 @@
             <div>
                 <input class="add" type="submit" value="Add Playlist">
             </div>
+            <div>
+                <input type="hidden" name="user" id="user" value=<%= loggedIn._id %>>
+            </div>
+
         </form>
     </div>
 </body>

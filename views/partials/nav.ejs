@@ -11,5 +11,10 @@
     <form action="/users/logout" method="GET">
         <input class="nav-item logout" type="submit" value="Logout">
     </form>
+    <% } else { %>
+    <form action="/users/login" method="GET">
+        <input class="nav-item logout" type="submit" value="Log In">
+    </form>
     <% } %>
+
 </nav>
