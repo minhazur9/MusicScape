@@ -1,7 +1,5 @@
 const express = require('express')
 const app = express();
-const bcrypt = require('bcrypt')
-const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const bodyParser = require('body-parser')
@@ -31,8 +29,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
-app.use(passport.initialize())
-app.use(passport.session())
+
 
 
 app.use(morgan('tiny'))

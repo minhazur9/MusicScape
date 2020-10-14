@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-const passport = require('passport')
+
 
 
 //GET INDEX
@@ -26,13 +26,7 @@ router.get('/signin', (req, res) => {
     
 })
 
-router.post('/signin', passport.authenticate('local', {
-    sucessRedirect: '/',
-    failureRedirect: '/users/signin',
-    failureFlash: true
-    
-}
-))
+
 
 
 //GET NEW
