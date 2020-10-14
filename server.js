@@ -1,8 +1,5 @@
 const express = require('express')
 const app = express();
-const bcrypt = require('bcrypt')
-const passport = require('passport')
-const flash = require('express-flash')
 const session = require('express-session')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -24,15 +21,11 @@ const { users } = require('./controllers');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
-app.use(flash())
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true
 }))
-
-app.use(passport.initialize())
-app.use(passport.session())
 
 
 app.use(morgan('tiny'))
