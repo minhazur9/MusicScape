@@ -22,3 +22,12 @@ function addCancel() {
     })
 }
 
+const songs = [ 
+    'Song1',
+    'Song2',
+    'Song3'
+];
+
+$('.song-text').autocomplete({
+    source: songs
+});
