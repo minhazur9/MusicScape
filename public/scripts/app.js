@@ -7,6 +7,7 @@ const requestOptions = {
     redirect: 'follow'
 };
 
+let songs = [];
 
 
 $('#delete').hide()
@@ -36,25 +37,50 @@ function addCancel() {
 
 let songString = "";
 
-$('.song-text').on('keyup', function (event) {
+
+
+$('.song-text').on('keyup', function (e) {
     songString = $(this).val();
-    fetch(`http://api.genius.com/search?q=${songString}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-            for (let i = 0; i < result.response.hits.length; i++) {
-                songs.push(result.response.hits[i].result.title)
-            }
-        })
-        .catch(error => console.log('error', error));
-    console.log(songs)
+    console.log(songs);
+    if (e.which <= 90 && e.which >= 48) {
+        fetch(`http://api.genius.com/search?q=${songString}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                for (let i = 0; i < result.response.hits.length; i++) {
+                    //     if (!(result.response.hits[i].result.title in songs)) {
+                    //         songs.push(result.response.hits[i].result.title)
+                    //     }
+                    if (songs.includes(result.response.hits[i].result.full_title) === false) songs.push(result.response.hits[i].result.full_title);
+
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
 });
 
-const songs = [];
+$('.song-form').submit(function (event) {
+    if ($('.artist-text').val().length < 1) {
+        event.preventDefault();
+    }
+})
 
 $('.song-text').autocomplete({
-    source: songs,
+    source: function (request, response) {
+        let results = $.ui.autocomplete.filter(songs, request.term);
+
+        response(results.slice(0, 10));
+    },
     autoFocus: true
-});
+},
+);
+
+$('.song-text').on('change', function () {
+    const songStr = $('.song-text').val().split("by")[0].trim();
+    const artistStr = $('.song-text').val().split("by")[1].trim();
+    $('.song-text').val(songStr);
+    $('.artist-text').val(artistStr);
+    // $('.artist-text').val(re)  
+})
 
 
 
