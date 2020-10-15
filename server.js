@@ -4,6 +4,8 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
+const fetch = require('node-fetch')
+
 
 
 require('dotenv').config()
