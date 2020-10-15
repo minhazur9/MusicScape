@@ -45,24 +45,25 @@ router.post('/', (req, res) => {
     })
 })
 
-// Create Song
-router.post('/:playlistId', (req, res) => {
-    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-        if (err) return console.log(err);
-        console.log(req.body);
-        foundPlaylist.songs.push(req.body);
-        foundPlaylist.save((err, savedSong) => {
-            if (err) return console.log(err);
-            res.redirect(`../playlists/${foundPlaylist._id}`);
-        })
-    })
-})
+// // Create Song
+// router.post('/:playlistId', (req, res) => {
+//     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+//         if (err) return console.log(err);
+//         console.log(req.body);
+//         foundPlaylist.songs.push(req.body);
+//         foundPlaylist.save((err, savedSong) => {
+//             if (err) return console.log(err);
+//             res.redirect(`../playlists/${foundPlaylist._id}`);
+//         })
+//     })
+// })
 
 // Show Playlist
 router.get('/:playlistId', (req, res) => {
     const playlistId = req.params.playlistId;
     db.Playlist.findById(playlistId)
         .populate('user')
+        .populate('songs')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
             if (!req.session.user) {
@@ -98,17 +99,17 @@ router.get('/:playlistId/edit', (req, res) => {
 
 })
 
-// New Song
-router.get('/:playlistId/newSong', (req, res) => {
-    db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-        if (err) return console.log(err);
-        const context = {
-            foundPlaylist,
-            loggedIn: req.session.user
-        };
-        res.render('playlists/newSong', context);
-    })
-})
+// // New Song
+// router.get('/:playlistId/newSong', (req, res) => {
+//     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
+//         if (err) return console.log(err);
+//         const context = {
+//             foundPlaylist,
+//             loggedIn: req.session.user
+//         };
+//         res.render('playlists/newSong', context);
+//     })
+// })
 
 // Update Playlist
 router.put('/:playlistId', (req, res) => {
