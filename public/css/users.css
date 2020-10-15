@@ -3,6 +3,7 @@
     font-family: 'Commissioner', sans-serif;
     color: whitesmoke;
     margin: 0px;
+    outline: none;
 }
 
 body {
@@ -393,7 +394,7 @@ nav {
 
 .nav-item:hover {
     background: #2366f7;
-    transition: all 1.5s;
+    transition: all .7s;
 }
 
 #users {

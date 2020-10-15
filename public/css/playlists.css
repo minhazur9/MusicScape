@@ -1,6 +1,7 @@
 * {
     font-family: 'Commissioner', sans-serif;
     margin: 0px;   
+    outline: none;
 }
 
 body {
@@ -241,7 +242,7 @@ nav {
 
 .nav-item:hover {
     background: #2366f7;
-    transition: all 1.5s;
+    transition: all .7s;
 }
 
 .nav-item:hover:after {

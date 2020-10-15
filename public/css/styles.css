@@ -1,6 +1,6 @@
 * {
     font-family: 'Commissioner', sans-serif;
-    
+    outline: none;
 }
 body {
     color: white;
@@ -148,7 +148,7 @@ nav {
 
 .nav-item:hover {
     background: #2366f7;
-    transition: all 1.5s;
+    transition: all .7s;
 }
 
 .nav-item:hover:after {
