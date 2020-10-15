@@ -6,8 +6,8 @@ const playlistSchema = new mongoose.Schema({
         required: true,
     },
     songs : [{
-        name: String,
-        artist: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Song'
     }],
     genre: {
         type: String
