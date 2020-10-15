@@ -17,14 +17,14 @@
 </head>
 
 <body>
-    <div class="index-front">
+    <div class="show-front">
         <h1 id="userheader"><%= user.name %> </h1>
         <h2 id="userartist"> Favorite Artist: <%= user.artist %></h2>
         <h2 id="userplaylists">Playlists</h2>
         <ul>
             <% for(i=0; i < user.playlists.length; i++) {%>
             <li class="playlist-list">
-                <a class="playlist-list" href='/playlists/<%=user.playlists[i]._id %>'> <%=user.playlists[i].name %>
+                <a  id="playlistselect" href='/playlists/<%=user.playlists[i]._id %>'> <%=user.playlists[i].name %>
                 </a>
 
 
@@ -44,7 +44,7 @@
 
 
             <a href="/users/<%= user._id %>/edit">
-                <button class="user-edit-button">Edit User</button>
+                <button class="user-edit-button">Edit Account</button>
             </a>
 
             <input class="delete-playlist" type="submit" value="Delete User">
