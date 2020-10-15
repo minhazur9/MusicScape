@@ -171,9 +171,13 @@ nav {
     padding-bottom: 8px;
     padding-left: 20px;
     margin-left: 0px;
-
 }
 
+#mypage {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-left: 0px;
+}
 .logout {
     position: relative;
     background: none;

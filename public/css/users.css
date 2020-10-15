@@ -431,6 +431,11 @@ nav {
     padding-left: 20px;
     margin-left: 0px;
 }
+#mypage {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-left: 0px;
+}
 
 #userheader {
     font-size: 60px;
@@ -455,22 +460,22 @@ nav {
 
 
 .warning {
-    border: solid 3px red;
+    border: solid 3px black;
     border-radius: 10px;
     z-index: 3;
-    background-color: white;
+    background-color: grey;
     position: relative;
-    left: 550px;
+    bottom: 420px;
     width: 400px;
     height: 150px;
-    bottom: 500px;
+    margin: auto;
     filter: blur(0px);
 }
 
 .warning h4 {
     position: absolute;
     left: 40px;
-    color: black;
+    color: white;
     font-size: 30px;
 }
 
@@ -479,12 +484,17 @@ nav {
     position: absolute;
     color: white;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid red;
     bottom: 0px;
     left: 240px;
     padding: 3px;
     font-size: 35px;
     padding-right: 20px;
+}
+.warning-button-yes:hover {
+    cursor: pointer;
+    background-color: rgb(179, 4, 4);
+    border: 2px solid rgb(179, 4, 4)
 }
 
 .warning-button-no {
@@ -492,11 +502,17 @@ nav {
     background-color: #2366F7;
     color: white;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid #2366f7;
     bottom: 0px;
     left: 50px;
     padding: 3px;
     font-size: 35px;
+}
+
+.warning-button-no:hover {
+    background-color:#1a4db9;
+    border: 2px solid #1a4db9;
+    cursor: pointer;
 }
 
 .logout {
