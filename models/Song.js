@@ -9,15 +9,12 @@ const songSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    genre: {
-        type: String
-    },
     playlist: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Playlist'
     }
 }, {timestamps: true})
 
-const Song = mongoose.model('Playlist', songSchema)
+const Song = mongoose.model('Song', songSchema)
 
 module.exports = Song

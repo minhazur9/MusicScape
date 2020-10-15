@@ -26,7 +26,7 @@
         <% if (userLoggedIn) { %>
         <div class='show-form'>
             <div class="playlist-edit">
-                <form action="/playlists/<%= foundPlaylist.id %>/newSong" method="GET">
+                <form action="/songs/<%= foundPlaylist.id %>/new" method="GET">
                     <input class="playlist-edit-button" type="submit" value="Add Song">
                 </form>
 

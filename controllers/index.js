@@ -1,4 +1,5 @@
 module.exports = {
     users: require('./usersController'),
-    playlists: require('./playlistsController')
+    playlists: require('./playlistsController'),
+    songs: require('./songsController')
 }
