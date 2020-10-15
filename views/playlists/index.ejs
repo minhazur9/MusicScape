@@ -15,8 +15,8 @@
         <h1 class="list-title">Playlists</h1>
         <ul>
             <% for( let i = 0; i < allPlaylists.length; i++ ) { %>
-            <li><a class="list" href="/playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %>
-                    <span id="made-by"> Created by <%= allPlaylists[i].name %> </span> 
+            <li class = "li-a"><a class="list" href="/playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %>
+                    <span id="made-by"> Created by <%= allPlaylists[i].user.name %> </span> 
                 </a></li>
             <% } %>
     </div>
