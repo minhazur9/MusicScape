@@ -1,14 +1,17 @@
 * {
     text-align: center;
     font-family: 'Commissioner', sans-serif;
-    color: black;
+    color: whitesmoke;
     margin: 0px;
 }
 
 body {
-    background: url('/images/background.png');
+    background-image: url('/images/download.png');
     min-height: 100vh;
+    overflow-y: hidden;
     overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .flex {
     display: flex;
@@ -58,8 +61,7 @@ body {
     background: none;
     border: none;
     position: absolute;
-    margin-left: 20px;
-    margin-top: -5px;
+    margin-left: 10px;
     padding: 0px;
     margin-bottom: 0px;
     line-height: 0px;
@@ -68,48 +70,58 @@ body {
     
 }
 
-.index-front {
+.show-front {
     margin: 0 auto;
-    position: relative;
-    min-height: 700px;
-    min-width: 900px;
-    max-width: 900px;
-    margin-top: 40px;
-    border: solid rgba(77, 76, 76, 0.5) 5px;
-    background-color: white;
-    color:black;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 500px;
+    min-width: 700px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
  
-    
-
 }
 
+.front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 400px;
+    min-width: 500px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+}
+ul {
+    margin-top: 40px;
+    padding-left: 0px;
+    margin-bottom: 50px;
+}
 li {
     list-style: none;
     text-align: left;
     font-size: 40px;
-    transition: background-color 0.1s ease-in;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .list-title {
-    border-bottom: solid 2px black;
-    display: inline-block;
-    margin-bottom: 20px;
     font-size: 55px;
+    background: #2366F7;
+    border: solid 1px #2366F7;
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
-li:hover {
-    background-color: rgba(151, 151, 151, 0.5);
-}
 
-#userlink {
-    text-decoration: none;
-    display: block;
-    margin-right: 35px;
-}
+
+
+
 .user-front {
-    max-width: 940px;
-    min-width: 900px;
+    max-width: 640px;
+    min-width: 600px;
     min-height: 560px;
     margin: 0 auto;
     margin-top: 70px;
@@ -118,22 +130,35 @@ li:hover {
     color:black;
 }
 .edit-front {
-    max-width: 940px;
-    min-width: 700px;
-    max-height: 79%;
-    min-height: 80%;
     margin: 0 auto;
-    margin-top: 70px;
-    border: solid rgba(77, 76, 76, 0.5) 5px;
-    background-color: white;
-    color:black;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 500px;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh
 }
+
+
 
 .new-title {
-    font-size: 40px;
-    margin-bottom: -10px;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 55px;
+    background: #2366F7;
+    border: solid 1px #2366F7;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
+.white {
+    background-color: white;
+}
 
 
 .add {
@@ -146,15 +171,20 @@ li:hover {
     border-radius: 10px;
     background-color: #2366f7;
     color: white;
-    border-color: white; 
-    padding: 12px;
+    padding: 8px;
+}
+
+.add:hover {
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border: 1px solid rgb(243, 243, 139);
+    cursor: pointer;
 }
 
 .text{
     font-size: 40px;
     border-radius: 5px;
-    background-color: black;
-    color:white;
+    color:black;
 }
 
 label {
@@ -180,7 +210,7 @@ form div {
     position: relative;
     right: 200px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 90px;
 
 }
 
@@ -206,15 +236,28 @@ form div {
     margin-top: 20px;
     margin-bottom: 40px;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     border-color: #2366f7;
     border-radius: 10px;
     background-color: #2366f7;
     color: white;
-    border-color: white; 
     padding: 12px;
     border-left: none;
     
+}
+
+.user-edit-button:hover {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    border-left: none;
+    cursor: pointer;
 }
 
 .user-changes-button {
@@ -227,22 +270,46 @@ form div {
     border-radius: 10px;
     background-color: #2366f7;
     color: white;
-    border-color: white; 
     padding: 12px;
+}
+
+.user-changes-button:hover {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    cursor: pointer;
 }
 
 .delete-playlist {
     padding: 10px;
     position: absolute;
-    font-size: 30px;
+    font-size: 20px;
     right: 40px; 
     border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
-    border-color: white;
-    left: 570px;
+    left: 540px;
     top: 10px;
-    
+}
+
+.delete-playlist:hover {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(141, 16, 12);
+    color: white; 
+    left: 540px;
+    top: 10px;
+    cursor: pointer;
 }
 
 input {
@@ -250,22 +317,51 @@ input {
 }
 
 .edit-title {
-    font-size: 40px;
+    font-size: 50px;
+    background: #2366f7;
+    padding-bottom: 5px;
 }
 
 .playlist-list {
+    margin: 0 auto;
+    margin-bottom: 15px;
     text-decoration: none;
     text-align: center;
     position: relative;
-    right: 12px;
-    font-size: 30px
-
+    width: fit-content;
+    transition: all 0.3s ease;
+    font-size: 35px;
 }
 
 .playlist-list:hover {
-    background-color: rgba( 0, 0, 0, 0,);
+    transform: scale(1.4);
+color: rgb(243, 243, 139)
+}
+
+#playlistselect {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+#playlistselect:hover {
+    color: rgb(243, 243, 139)
+}
+
+
+#userlink {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
     
 }
+
+#userlink:hover {
+    color: rgb(243, 243, 139);
+    transform : scale(1.4);
+}
+
 
 #signup {
     position: relative;
@@ -278,7 +374,7 @@ nav {
     height: 60px;
     position: relative;
     background: #222222;
-    margin: 0px;
+    margin: -8px;
     min-width: 1900px;
     
 
@@ -290,40 +386,55 @@ nav {
     font-size: 30px;
     background: none;
     border: none;
-    left: -545px;
-    border-radius: 0;
+    left: -550px;
+    border-radius: 10px;
     max-width: 120px;  
 }
 
+.nav-item:hover {
+    background: #2366f7;
+    transition: all 1.5s;
+}
+
 #users {
-    border-right: solid 1px white;
-    border-left: solid 1px white;
-    padding-right: 25px;
-    padding-top: 15px;
-    padding-left: 25px;
+    
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
     padding-bottom: 8px;
+    margin-right: 0px;
     
 }
 
 #playlists {
-    border-right: solid 1px white;
-    padding-right: 25px;
-    padding-top: 15px;
+    padding-right: 20px;
+    padding-top: 5px;
     padding-bottom: 8px;
+    padding-left: 20px;
+    margin-left: 0px;
 }
 
 #userheader {
     font-size: 60px;
+    background-color: #2366f7;
+    color: white;
+    padding-bottom: 5px;
 }
 
 #userartist {
-    font-size: 40px;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 #userplaylists {
-    margin-top: 15px;
-    text-decoration: underline
+    font-size: 40px;
+    margin-top: 35px;
+    text-decoration: underline;
+    margin-bottom: -20px
 }
+
+
 
 .warning {
     border: solid 3px red;
@@ -374,14 +485,29 @@ nav {
     font-size: 30px;
     background: none;
     border: none;
-    border-radius: 0;
     color: white;
     margin-left: 127vw;
     top: -25px;
-    border-left: solid 2px white;
-    padding-bottom: 15px;
-    margin-top: -5px;
+    padding-bottom: 8px;
     cursor: pointer;
     outline: none;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 0px
 }
+
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }

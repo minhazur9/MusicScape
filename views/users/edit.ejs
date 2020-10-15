@@ -10,16 +10,12 @@
 </head>
 <body>
     <div class="edit-front">
-    <h2 class="edit-title"> Edit <%= user.name %> </h2>
+    <h2 class="edit-title"> Edit Account</h2>
 
     <form action = "/users/<%= user._id %>?_method=PUT" method = "POSt">
         <div>
         <label for ="name">Name</label>
     <input class="text" type="text" name="name" value= "<%= user.name %>">
-    </div>
-    <div>
-    <label for ="password"> Password</label>
-    <input class="text" type="text" name="password" value= "<%= user.password %>">
     </div>
     <div>
     <label for = "artist"> Favorite Artist</label>

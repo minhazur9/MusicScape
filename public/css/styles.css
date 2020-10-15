@@ -6,14 +6,13 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/download.png');
-    height: 900px;
-    min-width: 1250px;
+    height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    backdrop-filter: blur(6px);
+    
    
 }
 .flex {
@@ -53,10 +52,7 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
-.nav:hover:hover {
-    color: #2366f7;
-    background: white;
-}
+
 
 #title {
     background: none;
@@ -73,8 +69,9 @@ a {
     width: 65%;
     min-height: 600px;
     min-width: 700px;
-    
-    margin-left: 17%;
+    max-width: 740px;
+    backdrop-filter: blur(6px);
+    margin: 0 auto;
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
 }
@@ -83,17 +80,47 @@ a {
     z-index: 2;
     color: white;
     font-size: 55px;
-    
+    margin-top: 60px;
+    position: relative;
+    top: 25px;
+    border-radius: 20px;
 
 }
 
 
+#login {
+    position: relative;
+    top: 150px;
+    font-size: 40px;
+    margin: 30px;
+}
 
 #signup {
     position: relative;
     top: 150px;
-    font-size: 50px;
-    padding: 10px;
+    font-size: 40px;
+    margin: 30px;
+    border: none;
+}
+
+#login:hover {
+    position: relative;
+    top: 150px;
+    font-size: 40px;
+    margin: 30px;
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border: 1px solid rgb(243, 243, 139)
+}
+
+#signup:hover {
+    position: relative;
+    top: 150px;
+    font-size: 40px;
+    margin: 30px;
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border: 1px solid rgb(243, 243, 139)
 }
 
 nav {
@@ -101,6 +128,7 @@ nav {
     position: relative;
     background: #222222;
     margin: -10px;
+    margin: -15px;
     min-width: 1900px;
 
 }
@@ -112,40 +140,68 @@ nav {
     background: none;
     border: none;
     left: -550px;
-    border-radius: 0;
+    border-radius: 10px;
+    
    
     
 }
 
+.nav-item:hover {
+    background: #2366f7;
+    transition: all 1.5s;
+}
+
+.nav-item:hover:after {
+    animation: fill 1s forwards
+}
+
+
 #users {
-    border-right: solid 1px white;
-    border-left: solid 1px white;
-    padding-right: 25px;
-    padding-top: 15px;
-    padding-left: 25px;
+    
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
     padding-bottom: 8px;
+    margin-right: 0px;
 }
 
 #playlists {
-    border-right: solid 1px white;
-    padding-right: 25px;
-    padding-top: 15px;
+    
+    padding-right: 20px;
+    padding-top: 5px;
     padding-bottom: 8px;
+    padding-left: 20px;
+    margin-left: 0px;
 
 }
 
 .logout {
-    font-size: 30px;
+    position: relative;
     background: none;
     border: none;
-    border-radius: 0;
     color: white;
     margin-left: 127vw;
     top: -25px;
-    border-left: solid 2px white;
-    padding-bottom: 15px;
-    margin-top: -5px;
+    padding-bottom: 8px;
+    padding-left: 10px;
     cursor: pointer;
     outline: none;
-    padding-right: 5px;
+    padding-right: 10px;
 }
+
+
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }
