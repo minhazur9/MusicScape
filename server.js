@@ -37,10 +37,7 @@ app.use(methodOverride('_method'));
 app.use(session({
   secret:"dasdsadjnjfnjenjfnjeuieewwqedwq",
   resave: false,
-  saveUninitialized: true}))
-
-
-
+  saveUninitialized: false}))
 
 
 app.get('/', (req, res) => {

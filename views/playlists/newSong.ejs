@@ -18,7 +18,7 @@
     <%- include('../partials/nav') %>
     <div class="index-front">
         <h1>Add New Song</h1>
-        <form action="/playlists/<%= foundPlaylist._id %>" method="POST">
+        <form class="song-form" action="/playlists/<%= foundPlaylist._id %>" method="POST">
             <div>
                 <label for="name">Name:</label>
                 <input class="text song-text" type="text" name="name" id="name">
@@ -26,7 +26,7 @@
 
             <div>
                 <label for="artist">Artist:</label>
-                <input class="text" type="text" name="artist" id="artist">
+                <input class="text artist-text" type="text" name="artist" id="artist">
             </div>
 
             <div>
