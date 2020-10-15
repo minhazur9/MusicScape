@@ -63,6 +63,7 @@ router.get('/:playlistId', (req, res) => {
     const playlistId = req.params.playlistId;
     db.Playlist.findById(playlistId)
         .populate('user')
+        .populate('songs')
         .exec((err, foundPlaylist) => {
             if (err) return console.log(err);
             if (!req.session.user) {
