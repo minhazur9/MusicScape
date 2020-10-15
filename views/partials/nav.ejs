@@ -8,6 +8,7 @@
     <a class="nav-item" id="users" href="/users">Users</a>
     <a class="nav-item" id="playlists" href="/playlists">Playlists</a>
     <% if (loggedIn) { %>
+        <a class = "nav-item" id="mypage" href= '/users/<%=`${loggedIn._id}`%>'>My Page</a>
     <form action="/users/logout?_method=DELETE" method="POST">
         <input class="nav-item logout" type="submit" value="Logout">
     </form>
