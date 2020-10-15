@@ -52,6 +52,10 @@ a {
     text-decoration: none;
     font-size: 20px;
 }
+
+.nav-item:hover {
+    background-color: #2366f7;
+}
 .nav:hover:hover {
     color: #2366f7;
     background: white;
@@ -116,19 +120,21 @@ nav {
 
 
 #users {
-    border-right: solid 1px white;
-    border-left: solid 1px white;
+    
     padding-right: 25px;
     padding-top: 15px;
     padding-left: 25px;
     padding-bottom: 8px;
+    margin-right: 0px;
 }
 
 #playlists {
-    border-right: solid 1px white;
+    
     padding-right: 25px;
     padding-top: 15px;
     padding-bottom: 8px;
+    padding-left: 25px;
+    margin-left: 0px;
 
 }
 
@@ -142,7 +148,7 @@ nav {
     color: white;
     left: 500px;
     top: -25px;
-    border-left: solid 2px white;
+    
     padding-bottom: 15px;
     margin-top: -5px;
     cursor: pointer;
