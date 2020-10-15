@@ -6,14 +6,13 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/download.png');
-    height: 900px;
-    min-width: 1250px;
+    height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    backdrop-filter: blur(6px);
+    
    
 }
 .flex {
@@ -70,7 +69,7 @@ a {
     width: 65%;
     min-height: 600px;
     min-width: 700px;
-    
+    backdrop-filter: blur(6px);
     margin-left: 17%;
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
