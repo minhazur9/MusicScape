@@ -51,6 +51,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', ctrl.users);
 app.use('/playlists', ctrl.playlists);
+app.use('/songs', ctrl.songs);
 
 app.use('*', (req, res) => {
   const context = {loggedIn: req.session.user};
