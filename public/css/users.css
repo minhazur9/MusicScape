@@ -4,9 +4,11 @@
     color: black;
     margin: 0px;
 }
+
 body {
     background: url('/images/background.png');
-    min-width: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 .flex {
     display: flex;
@@ -108,7 +110,7 @@ li:hover {
 .user-front {
     max-width: 940px;
     min-width: 900px;
-    min-height: 700px;
+    min-height: 560px;
     margin: 0 auto;
     margin-top: 70px;
     border: solid rgba(77, 76, 76, 0.5) 5px;
@@ -369,18 +371,17 @@ nav {
 }
 
 .logout {
-    position: relative;
     font-size: 30px;
     background: none;
     border: none;
-    left: -550px;
     border-radius: 0;
     color: white;
-    left: 500px;
+    margin-left: 127vw;
     top: -25px;
     border-left: solid 2px white;
     padding-bottom: 15px;
     margin-top: -5px;
     cursor: pointer;
     outline: none;
+    padding-right: 5px;
 }
