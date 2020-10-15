@@ -22,11 +22,7 @@ function addCancel() {
     })
 }
 
-const songs = [ 
-    'Song1',
-    'Song2',
-    'Song3'
-];
+const songs = [ ];
 
 $('.song-text').autocomplete({
     source: songs,
@@ -43,8 +39,12 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("api.genius.com/search?q=Eminem&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch("http://api.genius.com/search?q=Eminem&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG", requestOptions)
+  .then(response => response.json())
+  .then(result => {
+      for(let i = 0; i < result.response.hits.length; i++) {
+        songs.push(result.response.hits[i].result.title)
+      }
+  })
+.catch(error => console.log('error', error));
 
