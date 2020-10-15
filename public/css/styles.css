@@ -8,7 +8,8 @@ body {
     background-image: url('/images/download.png');
     height: 900px;
     min-width: 1250px;
-    
+    overflow-y: hidden;
+    overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -51,6 +52,10 @@ a {
     padding: 3px;
     text-decoration: none;
     font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color: #2366f7;
 }
 .nav:hover:hover {
     color: #2366f7;
@@ -112,43 +117,49 @@ nav {
     border: none;
     left: -550px;
     border-radius: 0;
+   
+    
 }
 
+<<<<<<< HEAD
 .nav-item:hover {
     background: #2366f7;
 }
 
 
+=======
+>>>>>>> submaster
 #users {
-    border-right: solid 1px white;
-    border-left: solid 1px white;
+    
     padding-right: 25px;
     padding-top: 15px;
     padding-left: 25px;
     padding-bottom: 8px;
+    margin-right: 0px;
 }
 
 #playlists {
-    border-right: solid 1px white;
+    
     padding-right: 25px;
     padding-top: 15px;
     padding-bottom: 8px;
+    padding-left: 25px;
+    margin-left: 0px;
 
 }
 
 .logout {
-    position: relative;
     font-size: 30px;
     background: none;
     border: none;
-    left: -550px;
     border-radius: 0;
     color: white;
-    left: 250px;
+    margin-left: 127vw;
     top: -25px;
-    border-left: solid 2px white;
+    
     padding-bottom: 15px;
     margin-top: -5px;
     cursor: pointer;
     outline: none;
+    padding-right: 5px;
 }
