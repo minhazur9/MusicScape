@@ -69,8 +69,9 @@ a {
     width: 65%;
     min-height: 600px;
     min-width: 700px;
+    max-width: 740px;
     backdrop-filter: blur(6px);
-    margin-left: 17%;
+    margin: 0 auto;
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
 }
