@@ -30,6 +30,18 @@ router.post('/', (req, res) => {
     })
 })
 
+// Show Route
+router.get('/:songId/show' ,(req,res) => {
+    db.Song.findById(req.params.songId, (err, foundSong) => {
+        if (err) return console.log(err);
+        const context = {
+            foundSong,
+            loggedIn: req.session.user,
+        }
+        res.render('songs/show', context)
+    })
+})
+
 
 // Show Route
 
