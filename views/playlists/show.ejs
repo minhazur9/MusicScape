@@ -13,16 +13,18 @@
 
 <body>
     <%- include('../partials/nav') %>
-    <div class="index-front">
-        <h3>Name: <%= foundPlaylist.name %> </h3>
-        <h3>Created by: <a href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
-        <h3>Central Genre: <%= foundPlaylist.genre %> </h3>
+    <div class="show-front">
+        <h3 id= "playlistname"><%= foundPlaylist.name %> </h3>
+        <h3 id="playlistcreator">Created by: <a id="playlistuser" href="/users/<%= foundPlaylist.user._id %>"><%= foundPlaylist.user.name %></a> </h3>
+        <h3 id = "playlistgenre">Genre: <%= foundPlaylist.genre %> </h3>
+        <div id = "playlistsongs">
         <h3>Songs: </h3>
         <ul>
             <% for( let i = 0; i < foundPlaylist.songs.length; i++ ) { %>
             <li class='song'><%= `${foundPlaylist.songs[i].name} by ${foundPlaylist.songs[i].artist}` %></li>
             <% } %>
         </ul>
+        </div>
         <% if (userLoggedIn) { %>
         <div class='show-form'>
             <div class="playlist-edit">

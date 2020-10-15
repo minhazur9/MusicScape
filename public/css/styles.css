@@ -7,7 +7,6 @@ body {
     background-color: rgba(0, 0, 0, 1);
     background-image: url('/images/download.png');
     height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;

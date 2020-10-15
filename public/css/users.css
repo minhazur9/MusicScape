@@ -8,8 +8,7 @@
 
 body {
     background-image: url('/images/download.png');
-    min-height: 100vh;
-    overflow-y: hidden;
+    min-height: 110vh;
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
@@ -75,7 +74,7 @@ body {
     margin: 0 auto;
     border: 2px rgba(255, 255, 255, 0.07) solid;
     width: 65%;
-    min-height: 500px;
+    min-height: 450px;
     min-width: 700px;
     max-width: 800px;
     backdrop-filter: blur(10px);
@@ -134,13 +133,30 @@ li {
     margin: 0 auto;
     border: 2px rgba(255, 255, 255, 0.07) solid;
     width: 65%;
-    min-height: 500px;
+    min-height: 80vh;
     min-width: 900px;
     max-width: 600px;
     backdrop-filter: blur(10px);
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07);
-    height: 80vh
+    height: 80vh;
+    margin-bottom: 50px;
+}
+
+.login-front {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 380px;
+    max-height: 420px;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh;
+
 }
 
 
@@ -186,6 +202,7 @@ li {
     font-size: 40px;
     border-radius: 5px;
     color:black;
+   
 }
 
 label {
@@ -194,6 +211,8 @@ label {
     position: relative;
     text-align: left;
     top: 40px;
+    
+    
     
     
 }
@@ -211,7 +230,7 @@ form div {
     position: relative;
     right: 200px;
     display: inline-block;
-    margin-top: 90px;
+    margin-top: 120px;
 
 }
 
@@ -359,8 +378,10 @@ color: rgb(243, 243, 139)
 }
 
 #userlink:hover {
-    color: rgb(243, 243, 139);
     transform : scale(1.4);
+    background: grey;
+    width: 430px;
+    color: rgb(243, 243, 139);
 }
 
 

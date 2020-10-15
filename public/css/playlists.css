@@ -2,17 +2,17 @@
     font-family: 'Commissioner', sans-serif;
     margin: 0px;   
     outline: none;
+    color: whitesmoke
 }
 
 body {
     color: white;
     background-color: rgba(0, 0, 0, 1);
-    background-image: url('/images/background.png');
+    background-image: url('/images/download.png');
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    min-width: 1250px;
     overflow-x: hidden;
 }
 .flex {
@@ -29,19 +29,23 @@ body {
 }
 
 .list {
+    
     background: none;
-    border: none;
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
     font-size: 40px;
     display:block; 
-    transition: background-color 0.1s ease-in;
+    transition: all 0.7s ;
 
 }
 
 .list:hover {
     background-color: rgba(151, 151, 151, 0.5);
+    transform: scale(1.06);
+    color: rgb(243, 243, 139)
+    
 }
+
 
 label {
     display: block;
@@ -77,17 +81,21 @@ form div {
 .text{
     font-size: 40px;
     border-radius: 5px;
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
 }
 
 li {
     text-align: left;
-    margin-top: 10px;
-    
+    margin-top: 15px;
     margin-right: 20px;
+    list-style: none;
     
 }
+ul{
+    padding-left: 20px;
+}
+
 
 
 
@@ -120,15 +128,10 @@ li {
     font-size: 20px;
 }
 
-li {
-    list-style: none;
-    display: block;
-}
 
 .list-title {
-    border-bottom: solid 2px black;
-    display: inline-block;
-    margin-bottom: 20px;
+    background: #2366f7;
+    margin-bottom: 40px;
     font-size: 55px;
 }
 
@@ -141,15 +144,29 @@ li {
 }
 
 .index-front {
-    position: relative;
     margin: 0 auto;
-    min-height: 600px;
-    max-width: 1100px;
-    margin-top: 40px;
-    border: solid rgba(77, 76, 76, 0.5) 5px;
-    background-color: white;
-    color:black;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 450px;
+    min-width: 700px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
   
+}
+
+.show-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 350px;
+    min-width: 700px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
+
 }
 
 h3 {
@@ -158,22 +175,74 @@ h3 {
     margin-top: 20px;
 }
 
+#playlistname {
+    padding: 5px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 50px;
+    background-color: #2366f7
+}
+
+#playlistcreator {
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+#playlistgenre{
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#playlistuser{
+    color: rgb(243, 243, 139);
+    text-decoration: none;
+    transition: all 1s ease;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#playlistuser:hover{
+    transform: scale(1.3)
+}
+
+#playlistsongs {
+    margin: 0 auto;
+}
+
 .playlist-edit {
     position: relative;
-    left: 30px;
+    right: 200px;
+    display: inline-block;
+    margin-top: 70px;
 }
 
 .playlist-edit-button {
-    position: relative;
     margin-top: 20px;
-    font-size: 30px;
-    right: 280px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
     border-color: #2366f7;
     border-radius: 10px;
     background-color: #2366f7;
     color: white;
-    border-color: white; 
     padding: 12px;
+    border-left: none;
+}
+
+.playlist-edit-button:hover {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    border-left: none;
+    cursor: pointer;
 }
 
 .show-form form {
@@ -181,18 +250,30 @@ h3 {
 }
 
 .delete-playlist {
-    padding: 15px;
-    position: relative;
-    left: 200px;
-    font-size: 30px;
-    font-weight: 700;
-    
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
     border-radius: 12px;
     background-color: rgb(216, 26, 20);
     color: white; 
-    border-color: white;
-
+    left: 540px;
+    top: 10px;
 }
+
+.delete-playlist:hover {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(141, 16, 12);
+    color: white; 
+    left: 540px;
+    top: 10px;
+    cursor: pointer;
+}
+
 
 .song {
     border:none;
@@ -206,9 +287,10 @@ h3 {
 
 #made-by {
     position: absolute;
-    right: 30px;
+    right: 20px;
     font-size: 20px;
     text-align: right;
+    color: white;
     
 }
 
@@ -366,6 +448,7 @@ nav {
 
 .ui-widget {
     font-size: 1.8em;
+    
 }
 
 @keyframes fill {
