@@ -40,8 +40,8 @@ body {
 }
 
 .list:hover {
-    background-color: rgba(151, 151, 151, 0.5);
-    transform: scale(1.06);
+    background-color: black;
+    transform: scale(1.04);
     color: rgb(243, 243, 139)
     
 }
@@ -146,10 +146,9 @@ ul{
 .index-front {
     margin: 0 auto;
     border: 2px rgba(255, 255, 255, 0.07) solid;
-    width: 65%;
     min-height: 450px;
-    min-width: 700px;
-    max-width: 800px;
+    min-width: 800px;
+    max-width: 900px;
     backdrop-filter: blur(10px);
     margin-top: 50px;
     background: rgba(255, 255, 255, 0.07)
@@ -208,7 +207,49 @@ h3 {
 }
 
 #playlistsongs {
-    margin: 0 auto;
+    border: solid 1px black;
+    border-radius: 5%;
+    max-height: 350px;
+    width: 550px;
+    
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+    overflow-y: scroll ;
+    overflow-x: none;
+    scroll-behavior: smooth;
+}
+
+#byartist {
+    font-size: 15px;
+    display: block;
+}
+
+#songlink{
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+
+#songlink:hover{
+    color: rgb(243, 243, 139)
+}
+
+.song:hover {
+    color: rgb(243, 243, 139);
+    
+}
+
+
+.song {
+    text-align: center;
+   padding-bottom: 20px;
+}
+
+
+
+#songheader{
+    text-align: center;
 }
 
 .playlist-edit {
@@ -317,7 +358,7 @@ nav {
     font-size: 30px;
     background: none;
     border: none;
-    left: -560px;
+    left: -490px;
     border-radius: 10px;
     max-width: 120px;
 }
@@ -436,14 +477,14 @@ nav {
     background: none;
     border: none;
     color: white;
-    margin-left: 127vw;
+    margin-left: 92vw;
     top: -25px;
     padding-bottom: 8px;
     cursor: pointer;
     outline: none;
     padding-left: 10px;
     padding-right: 10px;
-    left: -550px;
+    
 }
 
 .ui-widget {
