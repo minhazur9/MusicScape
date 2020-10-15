@@ -1,4 +1,5 @@
 const express = require('express')
+const bycrypt = require('bcrypt')
 const router = express.Router()
 const db = require('../models')
 
@@ -17,20 +18,11 @@ router.get('/', (req, res) => {
 })
 
 
-//GET SIGN IN
-
-router.get('/signin', (req, res) => {
-
-    res.render('users/signin')
-
-})
-
-
 //GET NEW
 
 router.get('/new', (req, res) => {
-    const context = { loggedIn: req.session.user }
-    res.render('users/new', context)
+        const context = { loggedIn: req.session.user }
+        res.render('users/new', context)
 })
 
 // Login
@@ -47,20 +39,28 @@ router.post('/login', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
-    db.User.findOne({ email: email, password: password }, (err, user) => {
+    db.User.findOne({ email: email }, (err, user) => {
         if (err) return console.log(err);
         if (!user) {
-            console.log('wrong')
             return res.redirect('/users/login');
         }
-        req.session.user = user;
-        return res.redirect(`/users/${user._id}`);
+        bycrypt.compare(password, user.password, (err, isMatch) => {
+            if (err) return console.log(err);
+            if (isMatch) {
+                req.session.user = user;
+                return res.redirect(`/users/${user._id}`);
+            }
+            else {
+                return res.redirect('/users/login');
+            }
+        })
+
 
     })
 })
 
 // Logout
-router.get('/logout', (req, res) => {
+router.delete('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('../')
 })
@@ -68,17 +68,30 @@ router.get('/logout', (req, res) => {
 //POST NEW
 
 router.post('/', (req, res) => {
+    if(req.body.user === '' || req.body.password === '' || req.body.email === '') {
+        return res.redirect('/users/new');
+    }
+    bycrypt.genSalt(10, (err, salt) => {
+        if (err) return console.log('Error');
+
+        bycrypt.hash(req.body.password, salt, (err, hashedPassword) => {
+            if (err) return console.log(err);
+            req.body.password = hashedPassword;
+
+            db.User.create(req.body, (err, newUser) => {
+                if (err) return console.log(err);
+                console.log(newUser)
+                res.redirect(`/users/${newUser._id}`)
+
+            })
+        });
+
+    });
 
 
-    db.User.create(req.body, (err, newUser) => {
-        if (err) return console.log(err);
-        console.log(newUser)
-        res.redirect(`/users/${newUser._id}`)
 
-    })
+
 })
-
-
 
 //GET EDIT
 
