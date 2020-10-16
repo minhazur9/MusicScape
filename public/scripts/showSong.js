@@ -19,7 +19,7 @@ $(document).ready(function () {
             for (let i = 0; i < result.response.hits.length; i++) {
                 console.log(result.response.hits[i].result.title)
                 console.log(result.response.hits[i].result.primary_artist.name)
-                if (result.response.hits[i].result.title === songName && result.response.hits[i].result.primary_artist.name == artistName) {
+                if (result.response.hits[i].result.title === songName) {
                     const foundItem = result.response.hits[i].result
                     $('.song-art').attr('src', `${foundItem.song_art_image_url}`);
                     songPath = foundItem.api_path;
@@ -39,5 +39,4 @@ $(document).ready(function () {
             }
         })
         .catch(error => console.log('error', error));
-
 })
