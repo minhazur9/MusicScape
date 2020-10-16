@@ -8,13 +8,23 @@ Genius Clone will allow for its users to curate their own personal playlists and
 - CSS
 - Javascript
 - Node
+
+### Dependencies
 - Mongoose
 - Express
+- Bcrypt
+- Body-parser
+- Dotenv
+- EJS
+- Express-session
+- Method-override
+- Morgan
+- Node-fetch
 
 
 ## User Story
 
-On the landing/home page, users will be greeted by a welcome message, a "view users" link and a "sign up" option in the top right hand corner of the page.
+On the landing/home page, users will be greeted by a welcome message, and be prompted to either sign in or make an account.
 
 Clicking the "sign up" button the user will be redirected to a page where they will be prompted to create a username and password. Once they submit the form to create their account, the user will be redirected to their own user show page. 
 
