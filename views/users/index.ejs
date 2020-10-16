@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href = "/css/users.css" rel="stylesheet">
+    <%- include('../partials/nav') %>
 </head>
 <body>
-    <h1>All existing users</h1>
+    
+    <div class = "front">
+        <h1 class= "list-title">Find Users</h1>
     <ul>
 <% for(let i = 0; i < allUsers.length; i++) { %>
     <li class = 'userlist'>
-        <a href="/users/<%=allUsers[i]._id %>"><%=allUsers[i].name %></a>
+        <a id="userlink" href="/users/<%=allUsers[i]._id %>"><%=allUsers[i].name %></a>
     </li>
 <% } %>
     </ul>
+    </div>
 </body>
 </html>

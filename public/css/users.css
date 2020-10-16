@@ -1,0 +1,563 @@
+* {
+    text-align: center;
+    font-family: 'Commissioner', sans-serif;
+    color: whitesmoke;
+    margin: 0px;
+    outline: none;
+}
+
+body {
+    background-image: url('/images/download.png');
+    min-height: 110vh;
+    overflow-x: hidden;
+    background-size: cover;
+    
+}
+.flex {
+    display: flex;
+}
+
+.logo {
+    font-size: 40px;
+    color: #2366f7;
+    position: relative;
+    align-items: flex-start;
+    margin-top: 35px;
+   
+}
+
+#music {
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding-right: 3px;
+    
+}
+
+#scape {
+    background-color: #2366f7;
+    margin-left: -9px;
+    color: white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding-left: 2px;
+    
+}
+.nav-item {
+    color: white;
+    background: #2366f7;
+    margin-right: 20px;
+    border: 1px solid #2366f7 ;
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#title {
+    background: none;
+    border: none;
+    position: absolute;
+    margin-left: 10px;
+    padding: 0px;
+    margin-bottom: 0px;
+    line-height: 0px;
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+
+.show-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 450px;
+    min-width: 700px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+ 
+}
+
+.front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 400px;
+    min-width: 500px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+}
+ul {
+    margin-top: 40px;
+    padding-left: 0px;
+    margin-bottom: 50px;
+}
+li {
+    list-style: none;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.list-title {
+    font-size: 55px;
+    background: #2366F7;
+    border: solid 1px #2366F7;
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+
+
+.user-front {
+    max-width: 640px;
+    min-width: 600px;
+    min-height: 560px;
+    margin: 0 auto;
+    margin-top: 70px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+}
+.edit-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 80vh;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh;
+    margin-bottom: 50px;
+}
+
+.new-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 750px;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh;
+    margin-bottom: 50px;
+}
+
+.login-front {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 380px;
+    max-height: 420px;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh;
+
+}
+
+
+
+.new-title {
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 55px;
+    background: #2366F7;
+    border: solid 1px #2366F7;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.white {
+    background-color: white;
+}
+
+
+.add {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 8px;
+}
+
+.add:hover {
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border: 1px solid rgb(243, 243, 139);
+    cursor: pointer;
+}
+
+.text{
+    font-size: 40px;
+    border-radius: 5px;
+    color:black;
+   
+}
+
+label {
+    display: block;
+    font-size: 30px;
+    position: relative;
+    text-align: left;
+    top: 40px;
+    
+    
+    
+    
+}
+
+form div {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 10px;
+    position: relative;
+    
+    
+}
+
+.playlist-edit {
+    position: relative;
+    right: 200px;
+    display: inline-block;
+    margin-top: 120px;
+
+}
+
+.playlist-edit-button {
+    margin-top: 20px;
+    position: relative;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    border-color: white; 
+    padding: 12px;
+    
+    
+}
+
+.user-edit-button {
+    
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 12px;
+    border-left: none;
+    
+}
+
+.user-edit-button:hover {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    border-left: none;
+    cursor: pointer;
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 12px;
+}
+
+.user-changes-button:hover {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    margin-right: 5px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.delete-playlist {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(216, 26, 20);
+    color: white; 
+    left: 540px;
+    top: 10px;
+}
+
+.delete-playlist:hover {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(141, 16, 12);
+    color: white; 
+    left: 540px;
+    top: 10px;
+    cursor: pointer;
+}
+
+input {
+    text-align: left;
+}
+
+.edit-title {
+    font-size: 50px;
+    background: #2366f7;
+    padding-bottom: 5px;
+}
+
+.playlist-list {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    transition: all 0.3s ease;
+    font-size: 35px;
+}
+
+.playlist-list:hover {
+    transform: scale(1.4);
+color: rgb(243, 243, 139)
+}
+
+#playlistselect {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+#playlistselect:hover {
+    color: rgb(243, 243, 139)
+}
+
+
+#userlink {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+#userlink:hover {
+    transform : scale(1.4);
+    color: rgb(243, 243, 139);
+}
+
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
+
+nav {
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: -8px;
+    min-width: 1900px;
+    
+
+}
+
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -480px;
+    border-radius: 10px;
+    max-width: 120px;  
+}
+
+.nav-item:hover {
+    background: #2366f7;
+    transition: all .7s;
+}
+
+#users {
+    
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    margin-right: 0px;
+    
+}
+
+#playlists {
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+#mypage {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-left: 0px;
+}
+
+#userheader {
+    font-size: 60px;
+    background-color: #2366f7;
+    color: white;
+    padding-bottom: 5px;
+}
+
+#userartist {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#userplaylists {
+    font-size: 40px;
+    margin-top: 35px;
+    text-decoration: underline;
+    margin-bottom: -20px
+}
+
+
+
+.warning {
+    border: solid 3px white;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: black;
+    position: relative;
+    bottom: 420px;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    filter: blur(0px);
+}
+
+.warning h4 {
+    position: absolute;
+    left: 40px;
+    color: white;
+    font-size: 30px;
+}
+
+.warning-button-yes {
+    background-color: red;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid red;
+    bottom: 0px;
+    left: 240px;
+    padding: 3px;
+    font-size: 35px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.warning-button-yes:hover {
+    cursor: pointer;
+    background-color: rgb(179, 4, 4);
+    border: 2px solid rgb(179, 4, 4)
+}
+
+.warning-button-no {
+    position: absolute;
+    background-color: #2366F7;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #2366f7;
+    bottom: 0px;
+    left: 50px;
+    padding: 3px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.warning-button-no:hover {
+    background-color:#1a4db9;
+    border: 2px solid #1a4db9;
+    cursor: pointer;
+}
+
+.logout {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 90vw;
+    top: -25px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    outline: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 0px
+}
+
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }

@@ -1,0 +1,665 @@
+* {
+    font-family: 'Commissioner', sans-serif;
+    margin: 0px;   
+    outline: none;
+}
+
+body {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url('/images/download.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow-x: hidden;
+}
+.flex {
+    display: flex;
+    position: absolute;
+}
+
+.logo {
+    font-size: 40px;
+    color: #2366f7;
+    position: relative;
+    align-items: flex-start;
+    margin-top: 35px;
+}
+
+.list {
+    
+    background: none;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 40px;
+    display:block; 
+    transition: all 0.7s ;
+
+}
+
+.list:hover {
+    background-color: black;
+    transform: scale(1.04);
+    color: rgb(243, 243, 139)
+    
+}
+
+
+label {
+    display: block;
+    font-size: 30px;
+    position: relative;
+    text-align: left;
+    top: 40px;
+    
+}
+
+select {
+    font-size: 30px;
+}
+
+.add {
+    font-size: 20px;
+    border-color: #2366f7;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: #2366f7;
+    color: white; 
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.add:hover {
+    font-size: 20px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black; 
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form div {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+.text{
+    font-size: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+}
+
+li {
+    text-align: left;
+    margin-top: 15px;
+    margin-right: 20px;
+    list-style: none;
+    
+}
+ul{
+    padding-left: 20px;
+}
+
+
+
+
+#music {
+    color: black;
+    background-color: rgb(243, 243, 139);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding-right: 3px;
+}
+
+#scape {
+    background-color: #2366f7;
+    margin-left: -9px;
+    color: white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding-left: 2px;
+}
+
+
+.nav-item, #title {
+    color: white;
+    background: #2366f7;
+    margin-right: 20px;
+    border: 1px solid #2366f7 ;
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.list-title {
+    background: #2366f7;
+    margin-bottom: 40px;
+    font-size: 55px;
+}
+
+#title {
+    background: none;
+    border: none;
+    padding: 0px;
+    margin-bottom: 0px;
+    line-height: 0px;
+}
+
+.index-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    min-height: 450px;
+    min-width: 600px;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
+  
+}
+#newhead {
+    background: #2366f7;
+    font-size: 50px;
+    padding-bottom: 8px;
+}
+
+.new-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    min-height: 450px;
+    min-width: 800px;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
+  
+}
+
+.edit-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    min-height: 450px;
+    min-width: 800px;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
+  
+}
+
+.show-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 350px;
+    min-width: 700px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07)
+
+}
+
+h3 {
+    text-align: left;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+#playlistname {
+    padding: 5px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 50px;
+    background-color: #2366f7
+}
+
+#playlistcreator {
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+#playlistgenre{
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#playlistuser{
+    color: rgb(243, 243, 139);
+    text-decoration: none;
+    transition: all 1s ease;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#playlistuser:hover{
+    transform: scale(1.3)
+}
+
+#playlistsongs {
+    border: solid 1px black;
+    border-radius: 5%;
+    max-height: 350px;
+    width: 550px;
+    
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: black;
+    overflow-y: scroll ;
+    overflow-x: none;
+    scroll-behavior: smooth;
+}
+
+#byartist {
+    font-size: 15px;
+    display: block;
+}
+
+#songlink{
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+
+#songlink:hover{
+    color: rgb(243, 243, 139)
+}
+
+.song:hover {
+    color: rgb(243, 243, 139);
+    
+}
+
+
+.song {
+    text-align: center;
+   padding-bottom: 20px;
+   color: whitesmoke;
+}
+
+
+
+#songheader{
+    text-align: center;
+}
+
+.playlist-edit {
+    position: relative;
+    right: 200px;
+    display: inline-block;
+    margin-top: 70px;
+}
+
+.playlist-edit-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 12px;
+    border-left: none;
+}
+
+.playlist-edit-button:hover {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    border-color: rgb(243, 243, 139);
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    padding: 12px;
+    border-left: none;
+    cursor: pointer;
+}
+
+.show-form form {
+    display: inline;
+}
+
+.delete-playlist {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(216, 26, 20);
+    color: white; 
+    left: 540px;
+    top: 10px;
+}
+
+.delete-playlist:hover {
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    right: 40px; 
+    border-radius: 12px;
+    background-color: rgb(141, 16, 12);
+    color: white; 
+    left: 540px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.song {
+    border:none;
+    font-size: 25px;
+}
+
+#cancel-song {
+    bottom: 118px;
+    left: 110px;
+}
+
+#made-by {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    
+}
+
+#signup {
+    position: relative;
+    top: 150px;
+    font-size: 50px;
+    padding: 10px;
+}
+
+nav {
+    height: 60px;
+    position: relative;
+    background: #222222;
+    margin: -7px;
+    min-width: 1900px;
+    margin-left: 2px;
+
+}
+
+.nav-item {
+    position: relative;
+    top: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    left: -490px;
+    border-radius: 10px;
+    max-width: 120px;
+}
+
+.nav-item:hover {
+    background: #2366f7;
+    transition: all .7s;
+}
+
+.nav-item:hover:after {
+    animation: fill 1s forwards
+}
+
+#users {
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    margin-right: 0px;
+    
+}
+
+#playlists {
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+
+#mypage {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-left: 0px;
+}
+
+.song-edit-button {
+    position: relative;
+    margin-top: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 12px;
+    right: 120px;
+    
+}
+
+.song-edit-button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(243, 243, 139);
+    
+}
+
+.user-changes-button {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: #2366f7;
+    color: white;
+    padding: 12px;
+}
+
+.user-changes-button:hover {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    margin-right: 5px;
+    border-color: #2366f7;
+    border-radius: 10px;
+    background-color: rgb(243, 243, 139);
+    color: black;
+    border-color: rgb(243, 243, 139); 
+    padding: 12px;
+    cursor: pointer
+}
+
+.playlist-edit-front {
+    position: relative;
+    margin: 0 auto;
+    min-height: 600px;
+    max-width: 900px;
+    margin-top: 40px;
+    border: solid rgba(77, 76, 76, 0.5) 5px;
+    background-color: white;
+    color:black;
+}
+
+.warning {
+    border: solid 3px ;
+    border-radius: 10px;
+    z-index: 3;
+    color: white;
+    background-color: black;
+    position: relative;
+    margin: auto auto;
+    width: 400px;
+    height: 200px;
+    filter: blur(0px);
+    top: -300px;
+}
+
+.warning h4 {
+    position: absolute;
+    left: 40px;
+    color: white;
+    font-size: 30px;
+}
+
+.warning-button-yes {
+    background-color: red;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid red;
+    bottom: 0px;
+    left: 240px;
+    padding: 3px;
+    font-size: 35px;
+    padding-right: 20px;
+    margin: 20px;
+}
+.warning-button-yes:hover {
+    cursor: pointer;
+    background-color: rgb(179, 4, 4);
+    border: 2px solid rgb(179, 4, 4)
+}
+
+.warning-button-no {
+    position: absolute;
+    background-color: #2366F7;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #2366F7;
+    bottom: 0px;
+    left: 50px;
+    padding: 3px;
+    font-size: 35px;
+    margin: 20px;
+}
+
+
+.warning-button-no:hover {
+    background-color:#1a4db9;
+    border: 2px solid #1a4db9;
+    cursor: pointer;
+}
+
+.logout {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 92vw;
+    top: -25px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.ui-widget {
+    font-size: 1.8em;
+    
+}
+
+
+.song-name{
+    font-size: 45px;
+    padding-top: 5px;
+    background-color: #2366f7
+}
+.song-art {
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+    position: absolute;
+    top: 510px;
+    left: 250px;
+}
+
+.song-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 650px;
+    min-width: 750px;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.07)
+
+}
+
+.head{
+    margin-bottom: 60px;
+}
+.info{
+    top: 480px;
+    position: absolute;
+   
+}
+
+.extrainfo {
+    top: 10px;
+    position: absolute;
+    left: 390px;
+}
+.album {
+    position: relative;
+    
+    font-size: 20px;
+    width: 150px;
+}
+.date {
+    font-size: 20px;
+}
+.artist-name {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+    background-color: #2366f7;
+    
+}
+
+#deletesong{
+    position: absolute; 
+    top: 580px;
+    right: 50px;
+    border-radius: 12px;
+    background-color: rgb(216, 26, 20);
+    color: white; 
+    font-size: 30px;
+}
+
+
+
+
+@keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }

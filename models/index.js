@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb://localhost:27017/music", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useCreateIndex: true,
@@ -17,5 +17,6 @@ mongoose.connection.on('error', (err) => {
 
 module.exports = {
     User: require('./User'),
-    Playlist: require('./Playlist')
+    Playlist: require('./Playlist'),
+    Song: require('./Song')
 }
