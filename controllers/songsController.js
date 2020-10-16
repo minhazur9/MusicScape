@@ -36,14 +36,22 @@ router.get('/:songId/show', (req, res) => {
             if (err) return console.log(err);
             db.User.findById(foundPlaylist.user, (err, foundUser) => {
                 if (err) return console.log(err);
-                const ownerUser = foundUser;
-                const loggedIn = req.session.user.name === ownerUser.name
-                console.log(loggedIn);
-                const context = {
-                    foundSong,
-                    loggedIn: req.session.user.name === ownerUser.name,
+                if (!req.session.user) {
+                    const context = {
+                        foundSong,
+                        loggedIn: false,
+                    }
+                    res.render('songs/show', context)
                 }
-                res.render('songs/show', context)
+                else {
+                    const ownerUser = foundUser;
+                    const context = {
+                        foundSong,
+                        loggedIn: req.session.user.name === ownerUser.name,
+                    }
+                    res.render('songs/show', context)
+                }
+                
 
             })
         })
