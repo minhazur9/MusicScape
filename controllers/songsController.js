@@ -49,6 +49,7 @@ router.get('/:songId/show', (req, res) => {
                     const context = {
                         foundSong,
                         loggedIn: false,
+<<<<<<< HEAD
                         userLoggedIn: false,
                     }
                     res.render('songs/show', context)
@@ -64,11 +65,23 @@ router.get('/:songId/show', (req, res) => {
                 }
 
 
+=======
+                    }
+                    res.render('songs/show', context)
+                }
+                else {
+                    const ownerUser = foundUser;
+                    const context = {
+                        foundSong,
+                        loggedIn: req.session.user.name === ownerUser.name,
+                    }
+                    res.render('songs/show', context)
+                }
+>>>>>>> submaster
             })
         })
-
     })
-})
+}) 
 
 // Delete Route
 router.delete('/:songId', (req, res) => {

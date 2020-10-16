@@ -18,19 +18,23 @@
         
         
         <div class="song-front">
+            <div class="head">
             <h2 class='song-name'><span id=song-name><%= foundSong.name %></span> </h2>
+            <h3 class ="artist-name"><span id="artist-name"><%= foundSong.artist %></span></h3>
+            </div>
             <div class="video"> </div>
             <img src=""  alt="" class="song-art">
             <div class ="info">
-            <h2 class='artist-name'> <span id=artist-name><%= foundSong.artist %></span> </h2>
+            
             <div class="extrainfo">
-            <h3 class ="album">Album Info</h3>
-            <h3 id= "date" class ="date">Date</h3>
+                
+            <h3 class ="album"></h3>
+            <h3 id= "date" class ="date"></h3>
             </div>
             </div>
             <% if (userLoggedIn) { %>
                 <form action="/songs/<%=foundSong._id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete">
+                    <input id="deletesong" type="submit" value="Delete">
                 </form>
             <% } %>
     

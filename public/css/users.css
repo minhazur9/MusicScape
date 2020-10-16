@@ -141,6 +141,20 @@ li {
     margin-bottom: 50px;
 }
 
+.new-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 750px;
+    min-width: 900px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    height: 80vh;
+    margin-bottom: 50px;
+}
+
 .login-front {
     margin: 0 auto;
     margin-top: 100px;
@@ -460,14 +474,14 @@ nav {
 
 
 .warning {
-    border: solid 3px black;
+    border: solid 3px white;
     border-radius: 10px;
     z-index: 3;
-    background-color: grey;
+    background-color: black;
     position: relative;
     bottom: 420px;
     width: 400px;
-    height: 150px;
+    height: 200px;
     margin: auto;
     filter: blur(0px);
 }
@@ -490,6 +504,7 @@ nav {
     padding: 3px;
     font-size: 35px;
     padding-right: 20px;
+    margin-bottom: 20px;
 }
 .warning-button-yes:hover {
     cursor: pointer;
@@ -507,6 +522,7 @@ nav {
     left: 50px;
     padding: 3px;
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
 .warning-button-no:hover {

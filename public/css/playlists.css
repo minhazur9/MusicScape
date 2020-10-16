@@ -165,6 +165,11 @@ ul{
     background: rgba(255, 255, 255, 0.07)
   
 }
+#newhead {
+    background: #2366f7;
+    font-size: 50px;
+    padding-bottom: 8px;
+}
 
 .new-front {
     margin: 0 auto;
@@ -249,6 +254,7 @@ h3 {
     
     margin: auto;
     margin-top: 20px;
+    margin-bottom: 30px;
     background-color: black;
     overflow-y: scroll ;
     overflow-x: none;
@@ -358,7 +364,7 @@ h3 {
 }
 
 #cancel-song {
-    bottom: 135px;
+    bottom: 118px;
     left: 110px;
 }
 
@@ -434,14 +440,21 @@ nav {
 .song-edit-button {
     position: relative;
     margin-top: 20px;
-    font-size: 30px;
-    border-color: #2366f7;
+    font-size: 20px;
+    border: none;
     border-radius: 10px;
     background-color: #2366f7;
     color: white;
-    border-color: white; 
     padding: 12px;
     right: 120px;
+    
+}
+
+.song-edit-button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(243, 243, 139);
+    
 }
 
 .user-changes-button {
@@ -487,13 +500,14 @@ nav {
     border: solid 3px ;
     border-radius: 10px;
     z-index: 3;
-    background-color: grey;
+    color: white;
+    background-color: black;
     position: relative;
-    margin: auto;
+    margin: auto auto;
     width: 400px;
-    height: 150px;
-    bottom: 420px;
+    height: 200px;
     filter: blur(0px);
+    top: -300px;
 }
 
 .warning h4 {
@@ -565,9 +579,7 @@ nav {
 
 .song-name{
     font-size: 45px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    padding-top: 5px;
     background-color: #2366f7
 }
 .song-art {
@@ -575,15 +587,15 @@ nav {
     width: 100px;
     border-radius: 20%;
     position: absolute;
-    top: 500px;
-    left: 330px;
+    top: 510px;
+    left: 250px;
 }
 
 .song-front {
     margin: 0 auto;
     border: 2px rgba(255, 255, 255, 0.07) solid;
     width: 65%;
-    min-height: 750px;
+    min-height: 650px;
     min-width: 750px;
     max-width: 700px;
     backdrop-filter: blur(10px);
@@ -591,26 +603,49 @@ nav {
     background: rgba(255, 255, 255, 0.07)
 
 }
+
+.head{
+    margin-bottom: 60px;
+}
 .info{
-    top: 430px;
+    top: 480px;
     position: absolute;
    
 }
 
 .extrainfo {
-    top: 170px;
+    top: 10px;
     position: absolute;
-    left: 280px;
+    left: 390px;
 }
-
-
 .album {
-
+    position: relative;
+    
+    font-size: 20px;
+    width: 150px;
+}
+.date {
+    font-size: 20px;
+}
+.artist-name {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+    background-color: #2366f7;
+    
 }
 
-.date{
-
+#deletesong{
+    position: absolute; 
+    top: 680px;
+    right: 50px;
+    border-radius: 12px;
+    background-color: rgb(216, 26, 20);
+    color: white; 
+    font-size: 30px;
 }
+
+
 
 
 @keyframes fill {
