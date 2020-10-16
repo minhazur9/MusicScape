@@ -29,14 +29,42 @@ router.post('/', (req, res) => {
 
 
 // Show Route
-router.get('/:songId/show' ,(req,res) => {
+router.get('/:songId/show', (req, res) => {
     db.Song.findById(req.params.songId, (err, foundSong) => {
         if (err) return console.log(err);
-        const context = {
-            foundSong,
-            loggedIn: req.session.user,
-        }
-        res.render('songs/show', context)
+        db.Playlist.findById(foundSong.playlist, (err, foundPlaylist) => {
+            if (err) return console.log(err);
+            db.User.findById(foundPlaylist.user, (err, foundUser) => {
+                if (err) return console.log(err);
+                const ownerUser = foundUser;
+                const loggedIn = req.session.user.name === ownerUser.name
+                console.log(loggedIn);
+                const context = {
+                    foundSong,
+                    loggedIn: req.session.user.name === ownerUser.name,
+                }
+                res.render('songs/show', context)
+
+            })
+        })
+
+    })
+})
+
+// Delete Route
+router.delete('/:songId', (req, res) => {
+    const songId = req.params.songId;
+    db.Song.findByIdAndDelete(songId, (err, foundSong) => {
+        if (err) return console.log(err);
+        db.Playlist.findOne(foundSong.playlist, (err, foundPlaylist) => {
+            if (err) return console.log(err);
+            foundPlaylist.songs.remove(songId);
+            foundPlaylist.save((err) => {
+                if (err) return console.log(err);
+                res.redirect('/playlists')
+            })
+
+        })
     })
 })
 
