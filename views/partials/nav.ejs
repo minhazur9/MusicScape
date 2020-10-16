@@ -1,0 +1,23 @@
+<nav>
+    <div class="flex">
+
+        <a href="/" id="title">
+            <h1 class="logo"> <span id="music">Music</span> <span id="scape">Scape</span></h1>
+        </a>
+    </div>
+    <a class="nav-item" id="users" href="/users">Users</a>
+    <a class="nav-item" id="playlists" href="/playlists">Playlists</a>
+    <% if (loggedIn) { %>
+        <a class = "nav-item" id="mypage" href= '/users/<%=`${loggedIn._id}`%>'>My Page</a>
+    <form action="/users/logout?_method=DELETE" method="POST">
+        <input class="nav-item logout" type="submit" value="Logout">
+    </form>
+
+
+    <% } else {%>
+        <form action="/users/login" method="GET">
+            <input class="nav-item logout" type="submit" value="Log In">
+        </form>
+
+    <% } %>
+</nav>

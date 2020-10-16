@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/nav') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href="/css/playlists.css" rel="stylesheet">
+    <title>All Playlists</title>
+</head>
+
+<body>
+    <div class='index-front'>
+        <h1 class="list-title">Playlists</h1>
+        <ul>
+            <% for( let i = 0; i < allPlaylists.length; i++ ) { %>
+            <li class = "li-a"><a class="list" href="/playlists/<%= allPlaylists[i]._id %>"><%= allPlaylists[i].name %>
+                    <span id="made-by"> Created by <%= allPlaylists[i].user.name %> </span> 
+                </a></li>
+            <% } %>
+    </div>
+    </ul>
+</body>
+
+</html>

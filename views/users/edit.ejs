@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;600&display=swap" rel="stylesheet">
+    <link href = "/css/users.css" rel="stylesheet">
+    <%- include('../partials/nav') %>
+</head>
+<body>
+    <div class="edit-front">
+    <h2 class="edit-title"> Edit Account</h2>
+
+    <form action = "/users/<%= user._id %>?_method=PUT" method = "POSt">
+        <div>
+        <label for ="name">Username</label>
+    <input class="text" type="text" name="name" value= "<%= user.name %>">
+    </div>
+    <div>
+    <label for = "artist"> Favorite Artist</label>
+    <input class="text" type="text" name="artist" value= "<%= user.artist %>">
+        </div>
+        <div>
+    <input class= "user-changes-button" type = "submit" value="Confirm Changes">
+        </div>
+    </form>
+</div>
+</body>
+</html>
