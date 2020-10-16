@@ -4,7 +4,6 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
-const fetch = require('node-fetch')
 
 
 
@@ -16,7 +15,6 @@ app.set('view engine', 'ejs')
 
 
 const ctrl = require('./controllers');
-const { users } = require('./controllers');
 
 
 
@@ -33,12 +31,6 @@ app.use(session({
 app.use(morgan('tiny'))
 
 app.use(methodOverride('_method'));
-
-app.use(session({
-  secret:"dasdsadjnjfnjenjfnjeuieewwqedwq",
-  resave: false,
-  saveUninitialized: false}))
-
 
 app.get('/', (req, res) => {
     const context = {loggedIn: req.session.user}

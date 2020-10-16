@@ -3,8 +3,14 @@ const router = express.Router()
 const db = require('../models')
 // New Route
 router.get('/:playlistId/new', (req, res) => {
+    if (!req.session.user) {
+        return res.redirect('/login')
+    }
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-        if (err) return console.log(err);
+        if (err) {
+            console.log(err);
+            return res.redirect('/404');
+        }
         const context = {
             foundPlaylist,
             loggedIn: req.session.user,
@@ -31,7 +37,10 @@ router.post('/', (req, res) => {
 // Show Route
 router.get('/:songId/show', (req, res) => {
     db.Song.findById(req.params.songId, (err, foundSong) => {
-        if (err) return console.log(err);
+        if (err) {
+            console.log(err);
+            return res.redirect('/404');
+        }
         db.Playlist.findById(foundSong.playlist, (err, foundPlaylist) => {
             if (err) return console.log(err);
             db.User.findById(foundPlaylist.user, (err, foundUser) => {
@@ -40,6 +49,7 @@ router.get('/:songId/show', (req, res) => {
                     const context = {
                         foundSong,
                         loggedIn: false,
+                        userLoggedIn: false,
                     }
                     res.render('songs/show', context)
                 }
@@ -47,11 +57,12 @@ router.get('/:songId/show', (req, res) => {
                     const ownerUser = foundUser;
                     const context = {
                         foundSong,
-                        loggedIn: req.session.user.name === ownerUser.name,
+                        loggedIn: req.session.user,
+                        userLoggedIn: req.session.user.name === ownerUser.name,
                     }
                     res.render('songs/show', context)
                 }
-                
+
 
             })
         })
@@ -79,6 +90,6 @@ router.delete('/:songId', (req, res) => {
 
 
 
-// Show Route
+
 module.exports = router;
 

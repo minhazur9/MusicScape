@@ -28,9 +28,7 @@
             <h3 id= "date" class ="date">Date</h3>
             </div>
             </div>
-            <% if (loggedIn) { %>
-                <% console.log('something',loggedIn); %>
-                 
+            <% if (userLoggedIn) { %>
                 <form action="/songs/<%=foundSong._id%>?_method=DELETE" method="POST">
                     <input type="submit" value="Delete">
                 </form>

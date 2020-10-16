@@ -21,13 +21,19 @@ router.get('/', (req, res) => {
 //GET NEW
 
 router.get('/new', (req, res) => {
-        const context = { loggedIn: req.session.user }
-        res.render('users/new', context)
+    if (req.session.user) {
+        return res.redirect('/')
+    }
+    const context = { loggedIn: req.session.user }
+    res.render('users/new', context)
 })
 
 // Login
 
 router.get('/login', (req, res) => {
+    if (req.session.user) {
+        return res.redirect('/')
+    }
     const context = {
         loggedIn: req.session.user
     };
@@ -68,7 +74,7 @@ router.delete('/logout', (req, res) => {
 //POST NEW
 
 router.post('/', (req, res) => {
-    if(req.body.user === '' || req.body.password === '' || req.body.email === '') {
+    if (req.body.user === '' || req.body.password === '' || req.body.email === '') {
         return res.redirect('/users/new');
     }
     bycrypt.genSalt(10, (err, salt) => {
@@ -97,7 +103,10 @@ router.post('/', (req, res) => {
 
 router.get('/:userId/edit', (req, res) => {
     db.User.findById(req.params.userId, (err, foundUser) => {
-        if (err) return console.log(err)
+        if (err) {
+            console.log(err);
+            return res.redirect('/404');
+        }
 
         const context = {
             user: foundUser,
@@ -110,7 +119,6 @@ router.get('/:userId/edit', (req, res) => {
 //PUT EDIT
 
 router.put('/:userId', (req, res) => {
-
     db.User.findByIdAndUpdate(
         req.params.userId,
         req.body,
@@ -128,7 +136,10 @@ router.get('/:userId', (req, res) => {
     db.User.findById(req.params.userId)
         .populate('playlists')
         .exec((err, foundUser) => {
-            if (err) return console.log(err);
+            if (err) {
+                console.log(err)
+                return res.redirect('/404');
+            }
             if (!req.session.user) {
                 const context = {
                     user: foundUser,

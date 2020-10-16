@@ -3,7 +3,6 @@ const router = express.Router()
 
 const db = require('../models')
 
-
 // Redirect to New Playlist
 router.get('/', (req, res) => {
     db.Playlist.find()
@@ -20,6 +19,9 @@ router.get('/', (req, res) => {
 
 // New Playlist 
 router.get('/new', (req, res) => {
+    if (!req.session.user) {
+        res.redirect('/login')
+    }
     db.User.find({}, (err, allUsers) => {
         if (err) return console.log(err);
         const context = {
@@ -32,6 +34,10 @@ router.get('/new', (req, res) => {
 
 // Create Playlist
 router.post('/', (req, res) => {
+    if (req.body.name.length < 1) {
+        res.redirect('/playlists/new')
+        alert("Name Required")
+    }
     db.Playlist.create(req.body, (err, newPlaylist) => {
         if (err) return console.log(err);
         db.User.findById(req.body.user, (err, foundUser) => {
@@ -45,19 +51,6 @@ router.post('/', (req, res) => {
     })
 })
 
-// // Create Song
-// router.post('/:playlistId', (req, res) => {
-//     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-//         if (err) return console.log(err);
-//         console.log(req.body);
-//         foundPlaylist.songs.push(req.body);
-//         foundPlaylist.save((err, savedSong) => {
-//             if (err) return console.log(err);
-//             res.redirect(`../playlists/${foundPlaylist._id}`);
-//         })
-//     })
-// })
-
 // Show Playlist
 router.get('/:playlistId', (req, res) => {
     const playlistId = req.params.playlistId;
@@ -65,7 +58,10 @@ router.get('/:playlistId', (req, res) => {
         .populate('user')
         .populate('songs')
         .exec((err, foundPlaylist) => {
-            if (err) return console.log(err);
+            if (err) {
+                console.log(err);
+                return res.redirect('/404');
+            }
             if (!req.session.user) {
                 const context = {
                     foundPlaylist,
@@ -89,7 +85,10 @@ router.get('/:playlistId', (req, res) => {
 // Edit Playlist
 router.get('/:playlistId/edit', (req, res) => {
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-        if (err) return console.log(err);
+        if (err) {
+            console.log(err);
+            return res.redirect('/404');
+        }
         const context = {
             foundPlaylist,
             loggedIn: req.session.user
@@ -98,19 +97,6 @@ router.get('/:playlistId/edit', (req, res) => {
     })
 
 })
-
-// // New Song
-// router.get('/:playlistId/newSong', (req, res) => {
-//     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
-//         if (err) return console.log(err);
-//         const context = {
-//             foundPlaylist,
-//             loggedIn: req.session.user
-//         };
-//         res.render('playlists/newSong', context);
-//     })
-// })
-
 // Update Playlist
 router.put('/:playlistId', (req, res) => {
     db.Playlist.findByIdAndUpdate(
