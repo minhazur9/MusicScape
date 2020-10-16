@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../models')
-
-
 // New Route
 router.get('/:playlistId/new', (req, res) => {
     db.Playlist.findById(req.params.playlistId, (err, foundPlaylist) => {
@@ -14,7 +12,6 @@ router.get('/:playlistId/new', (req, res) => {
         res.render('songs/new', context);
     })
 })
-
 // Post Route
 router.post('/', (req, res) => {
     db.Song.create(req.body, (err, newSong) => {
@@ -29,9 +26,17 @@ router.post('/', (req, res) => {
         })
     })
 })
-
-
 // Show Route
-
-
+router.get('/:songId/show' ,(req,res) => {
+    db.Song.findById(req.params.songId, (err, foundSong) => {
+        if (err) return console.log(err);
+        const context = {
+            foundSong,
+            loggedIn: req.session.user,
+        }
+        res.render('songs/show', context)
+    })
+})
+// Show Route
 module.exports = router;
+
