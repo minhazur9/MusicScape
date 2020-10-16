@@ -192,6 +192,10 @@ nav {
     padding-right: 10px;
 }
 
+#error {
+    margin: 0 auto;
+}
+
 
 @keyframes fill {
     0% {

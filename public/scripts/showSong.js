@@ -30,7 +30,7 @@ $(document).ready(function () {
                             let video = result.response.song.media[0].url;
                             video = video.replace('watch?v=','embed/').replace(/&ab_channel.*$/, "");
                             console.log(video);
-                            $('body').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
+                            $('.song-front').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
                         })
                         .catch(error => console.log('error', error));
                     break;
