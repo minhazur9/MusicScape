@@ -11,10 +11,6 @@ const requestOptions = {
 let songs = [];
 
 
-
-
-
-
 $('#delete').hide()
 
 // Event Listeners

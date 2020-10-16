@@ -41,21 +41,4 @@ $(document).ready(function () {
 
         })
         .catch(error => console.log('error', error));
-
-    // Song Lyrics
-    // console.log(songName)
-    // fetch(`http://api.genius.com/search?q=${songName}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
-    //     .then(response => response.json())
-    //     .then(result => {
-    //         for (let i = 0; i < result.response.hits.length; i++) {
-    //             console.log(result.response.hits[i].result.title)
-    //             if (result.response.hits[i].result.title === songName) {
-    //                 $('.song-art').attr('src', `${result.response.hits[i].result.song_art_image_url}`)
-    //                 break;
-    //             }
-
-    //         }
-
-    //     })
-    //     .catch(error => console.log('error', error));
 })
