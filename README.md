@@ -68,5 +68,8 @@ Show
 
 ## Song
 Add song
-![Add](assets/addSong.PNG)
+![Add](assets/songs/addSong.PNG)
+
+Show Song
+![Show](assets/songs/show.PNG)
 
