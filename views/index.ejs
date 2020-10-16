@@ -15,9 +15,10 @@
     <div class='front'>
 
         <h2 id="welcome"> Create and view playlists from around the world </h2>
-
+<% if(!loggedIn) { %>
         <a href="/users/new" id="signup"> Sign Up</a>
         <a href="/users/login" id="login"> Log In</a>
+<% } %>
     </div>
     
 </body>
