@@ -36,7 +36,7 @@ $(document).ready(function () {
                             }
                             video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "");
                             console.log(video);
-                            $('.song-front').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
+                            $('.video').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
                         })
                         .catch(error => console.log('error', error));
                     break;
