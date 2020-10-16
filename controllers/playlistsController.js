@@ -99,6 +99,9 @@ router.get('/:playlistId/edit', (req, res) => {
 })
 // Update Playlist
 router.put('/:playlistId', (req, res) => {
+    if(req.body.name.length < 1) {
+        return res.redirect(`/playlists/${req.params.playlistId}/edit`)
+    }
     db.Playlist.findByIdAndUpdate(
         req.params.playlistId,
         req.body,

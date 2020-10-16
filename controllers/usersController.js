@@ -74,7 +74,7 @@ router.delete('/logout', (req, res) => {
 //POST NEW
 
 router.post('/', (req, res) => {
-    if (req.body.user === '' || req.body.password === '' || req.body.email === '') {
+    if (req.body.name.length < 1 || req.body.password.length < 1 || req.body.email.length < 1) {
         return res.redirect('/users/new');
     }
     bycrypt.genSalt(10, (err, salt) => {
@@ -119,6 +119,9 @@ router.get('/:userId/edit', (req, res) => {
 //PUT EDIT
 
 router.put('/:userId', (req, res) => {
+    if(req.body.name.length < 1) {
+        return res.redirect(`/users/${req.params.userId}/edit`)
+    }
     db.User.findByIdAndUpdate(
         req.params.userId,
         req.body,
