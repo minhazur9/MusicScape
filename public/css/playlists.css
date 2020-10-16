@@ -2,7 +2,6 @@
     font-family: 'Commissioner', sans-serif;
     margin: 0px;   
     outline: none;
-    color: whitesmoke
 }
 
 body {
@@ -280,6 +279,7 @@ h3 {
 .song {
     text-align: center;
    padding-bottom: 20px;
+   color: whitesmoke;
 }
 
 
@@ -561,6 +561,57 @@ nav {
     font-size: 1.8em;
     
 }
+
+
+.song-name{
+    font-size: 45px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    background-color: #2366f7
+}
+.song-art {
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+    position: absolute;
+    top: 500px;
+    left: 330px;
+}
+
+.song-front {
+    margin: 0 auto;
+    border: 2px rgba(255, 255, 255, 0.07) solid;
+    width: 65%;
+    min-height: 750px;
+    min-width: 750px;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.07)
+
+}
+.info{
+    top: 430px;
+    position: absolute;
+   
+}
+
+.extrainfo {
+    top: 170px;
+    position: absolute;
+    left: 280px;
+}
+
+
+.album {
+
+}
+
+.date{
+
+}
+
 
 @keyframes fill {
     0% {
