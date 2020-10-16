@@ -27,8 +27,14 @@ $(document).ready(function () {
                     fetch(`https://api.genius.com${songPath}?access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
                         .then(response => response.json())
                         .then(result => {
-                            let video = result.response.song.media[0].url;
-                            video = video.replace('watch?v=','embed/').replace(/&ab_channel.*$/, "");
+                            let video = '';
+                            for (let i = 0; i < result.response.song.media.length; i++) {
+                                if (result.response.song.media[i].provider === 'youtube') {
+                                    video = result.response.song.media[i].url;
+                                    break;
+                                }
+                            }
+                            video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "");
                             console.log(video);
                             $('.song-front').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
                         })
