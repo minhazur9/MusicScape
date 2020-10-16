@@ -7,7 +7,6 @@ const requestOptions = {
     redirect: 'follow'
 };
 
-
 $(document).ready(function () {
     // Song Cover
     const songName = $('#song-name').text()
@@ -38,7 +37,10 @@ $(document).ready(function () {
                 }
 
             }
-
         })
         .catch(error => console.log('error', error));
+<<<<<<< HEAD
+=======
+
+>>>>>>> submaster
 })
