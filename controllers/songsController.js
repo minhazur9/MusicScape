@@ -26,6 +26,8 @@ router.post('/', (req, res) => {
         })
     })
 })
+
+
 // Show Route
 router.get('/:songId/show' ,(req,res) => {
     db.Song.findById(req.params.songId, (err, foundSong) => {
@@ -37,6 +39,10 @@ router.get('/:songId/show' ,(req,res) => {
         res.render('songs/show', context)
     })
 })
+
+
+
+
 // Show Route
 module.exports = router;
 
