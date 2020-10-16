@@ -24,24 +24,5 @@ function addCancel() {
 }
 
 
-$('.song-form').submit(function (event) {
-    if ($('.artist-text').val().length < 1) {
-        event.preventDefault();
-    }
-})
-$('.song-text').autocomplete({
-    source: function (request, response) {
-        let results = $.ui.autocomplete.filter(songs, request.term);
-        response(results.slice(0, 10));
-    },
-    autoFocus: true
-},
-);
-$('.song-text').on('change', function () {
-    const songStr = $('.song-text').val().split("by")[0].trim();
-    const artistStr = $('.song-text').val().split("by")[1].trim();
-    $('.song-text').val(songStr);
-    $('.artist-text').val(artistStr);
-    // $('.artist-text').val(re)  
-})
+
 
