@@ -77,22 +77,28 @@ router.post('/', (req, res) => {
     if (req.body.name.length < 1 || req.body.password.length < 1 || req.body.email.length < 1) {
         return res.redirect('/users/new');
     }
-    bycrypt.genSalt(10, (err, salt) => {
-        if (err) return console.log('Error');
+    db.User.findOne({ $or: [{email: req.body.email},{user: req.body.name}] }, (err, foundUser) => {
+        if (err) console.log(err);
+        if (foundUser) return res.redirect('/users/new')
+        bycrypt.genSalt(10, (err, salt) => {
+            if (err) return console.log('Error');
 
-        bycrypt.hash(req.body.password, salt, (err, hashedPassword) => {
-            if (err) return console.log(err);
-            req.body.password = hashedPassword;
-
-            db.User.create(req.body, (err, newUser) => {
+            bycrypt.hash(req.body.password, salt, (err, hashedPassword) => {
                 if (err) return console.log(err);
-                console.log(newUser)
-                res.redirect(`/users/${newUser._id}`)
+                req.body.password = hashedPassword;
 
-            })
+                db.User.create(req.body, (err, newUser) => {
+                    if (err) return console.log(err);
+                    console.log(newUser)
+                    res.redirect(`/users/${newUser._id}`)
+
+                })
+            });
+
         });
 
-    });
+    })
+
 
 
 
@@ -119,7 +125,7 @@ router.get('/:userId/edit', (req, res) => {
 //PUT EDIT
 
 router.put('/:userId', (req, res) => {
-    if(req.body.name.length < 1) {
+    if (req.body.name.length < 1) {
         return res.redirect(`/users/${req.params.userId}/edit`)
     }
     db.User.findByIdAndUpdate(
