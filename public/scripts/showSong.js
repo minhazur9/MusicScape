@@ -8,14 +8,15 @@ const requestOptions = {
 };
 
 $(document).ready(function () {
-    // Song Cover
+    // Song Name and Artist
     const songName = $('#song-name').text()
-    const artistName = $('#artist-name').text()
+    let album;
     let songPath = "";
     console.log(songName)
     fetch(`https://api.genius.com/search?q=${songName}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
         .then(response => response.json())
         .then(result => {
+            // Song Cover
             for (let i = 0; i < result.response.hits.length; i++) {
                 console.log(result.response.hits[i].result.title)
                 console.log(result.response.hits[i].result.primary_artist.name)
@@ -34,9 +35,20 @@ $(document).ready(function () {
                                     break;
                                 }
                             }
+                            // Song Video
                             video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "");
                             console.log(video);
                             $('.video').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
+                            if(result.response.song.album.name) {
+                                $('.album').text(result.response.song.album.name)
+                                console.log(result.response.song.album.name)
+                            }
+                            else{
+                                $('.album').text('None')
+                            }
+                            $('.date').text(result.response.song.release_date_for_display)
+                            console.log(result.response.song.release_date_for_display)
+                            
                         })
                         .catch(error => console.log('error', error));
                     break;
