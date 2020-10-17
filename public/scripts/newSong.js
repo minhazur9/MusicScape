@@ -47,9 +47,8 @@ $('.song-text').autocomplete({
 
 // Auto completes author form if there is any author in the name form
 $('.song-text').on('change', function () {
-    const musicName = $('.song-text').val().split(" by ")
-    const songStr = musicName[0]
-    const artistStr = musicName[1]
+    const songStr = $('.song-text').val().split(" by")[0].trim();
+    const artistStr = $('.song-text').val().split(" by")[1].trim();
     $('.song-text').val(songStr);
     $('.artist-text').val(artistStr);
 })
