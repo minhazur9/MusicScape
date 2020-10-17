@@ -12,19 +12,15 @@ $(document).ready(function () {
     const songName = $('#song-name').text()
     let album;
     let songPath = "";
-    console.log(songName)
     fetch(`https://api.genius.com/search?q=${songName}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
         .then(response => response.json())
         .then(result => {
             // Song Cover
             for (let i = 0; i < result.response.hits.length; i++) {
-                console.log(result.response.hits[i].result.title)
-                console.log(result.response.hits[i].result.primary_artist.name)
                 if (result.response.hits[i].result.title === songName) {
                     const foundItem = result.response.hits[i].result
                     $('.song-art').attr('src', `${foundItem.song_art_image_url}`);
                     songPath = foundItem.api_path;
-                    console.log(songPath);
                     fetch(`https://api.genius.com${songPath}?access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
                         .then(response => response.json())
                         .then(result => {
