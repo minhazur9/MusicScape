@@ -17,7 +17,7 @@ let songs = [];
 $('.song-text').on('keyup', function (e) {
     uri = encodeURIComponent($(this).val());
     if (e.which <= 90 && e.which >= 48) {
-        fetch(`http://api.genius.com/search?q=${uri}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
+        fetch(`https://api.genius.com/search?q=${uri}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
             .then(response => response.json())
             .then(result => {
                 for (let i = 0; i < result.response.hits.length; i++) {
