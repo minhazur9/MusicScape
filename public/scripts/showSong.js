@@ -9,14 +9,21 @@ const requestOptions = {
 
 $(document).ready(function () {
     // Song Name and Artist
-    const songName = $('#song-name').text()
-    let album;
+    let songName = $('#song-name').text()
+    console.log(songName);
+    const uri = encodeURIComponent(songName)
+    console.log(uri);
     let songPath = "";
-    fetch(`https://api.genius.com/search?q=${songName}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
+    fetch(`https://api.genius.com/search?q=${uri}&access_token=rmzH73rX0vYovJ6sQLB0RDVoSJFOeD9qfA6lsegPqx_TU1SKwtZJrB0GWN8O4TiG`, requestOptions)
         .then(response => response.json())
         .then(result => {
+            console.log(result.response.hits)
             // Song Cover
-            for (let i = 0; i < result.response.hits.length; i++) {
+            for (let i = 0; i <= result.response.hits.length; i++) {
+                if (i === result.response.hits.length) {
+                    songName = result.response.hits[0].result.title;
+                    i = 0;
+                }
                 if (result.response.hits[i].result.title === songName) {
                     const foundItem = result.response.hits[i].result
                     $('.song-art').attr('src', `${foundItem.song_art_image_url}`);
@@ -32,18 +39,18 @@ $(document).ready(function () {
                                 }
                             }
                             // Song Video
-                            video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "").replace('http','https');
+                            video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "").replace('http', 'https');
                             $('.video').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
-                            if(result.response.song.album.name) {
+                            if (result.response.song.album.name) {
                                 $('.album').text(result.response.song.album.name)
 
                             }
-                            else{
+                            else {
                                 $('.album').text('None')
                             }
                             $('.date').text(result.response.song.release_date_for_display)
 
-                            
+
                         })
                         .catch(error => console.log('error', error));
                     break;
