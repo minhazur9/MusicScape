@@ -37,17 +37,16 @@ $(document).ready(function () {
                             }
                             // Song Video
                             video = video.replace('watch?v=', 'embed/').replace(/&ab_channel.*$/, "").replace('http','https');
-                            console.log(video);
                             $('.video').append(`<iframe width="420" height="315" src="${video}" frameborder="0" allowfullscreen></iframe>`);
                             if(result.response.song.album.name) {
                                 $('.album').text(result.response.song.album.name)
-                                console.log(result.response.song.album.name)
+
                             }
                             else{
                                 $('.album').text('None')
                             }
                             $('.date').text(result.response.song.release_date_for_display)
-                            console.log(result.response.song.release_date_for_display)
+
                             
                         })
                         .catch(error => console.log('error', error));
