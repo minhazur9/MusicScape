@@ -1,6 +1,7 @@
 # Genius Clone 
 
 Genius Clone will allow for its users to curate their own personal playlists and share it with their friends. 
+Live: https://fierce-bastion-27114.herokuapp.com/
 
 ## Technologies Used
 
